@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anton & Lily B&B</title>
+    <link rel="stylesheet" type="text/css" href="mainPage.css">
+  </head>
+
+  <body>
+
+<div class="fullScreenNavCont" id='fullScreenNavContId'>
+  <div class="closeBtnCubeCont" id='closeBtnCube'>
+    <div class="closeBtnCube">
+      <p id='closeBtnCube'>&#10005;</p>
+    </div>
+  </div>
+  <ul class="fullScreenNavItems">
+    <li><a href="#homeSect" class='active fullNavLink'>HOME</a></li>
+    <li><a href="#aboutSect" class='fullNavLink'>ABOUT</a></li>
+    <li><a href="#roomSect" class='fullNavLink'>ROOMS</a></li>
+    <li><a href="#servicesSect" class='fullNavLink'>SERVICES</a></li>
+    <li><a href="#gallerySect" class='fullNavLink'>GALLERY</a></li>
+    <li><a href="#seeNdooSect" class='fullNavLink'>SEE & DO</a></li>
+    <li><a href="#contactSect" class='fullNavLink'>CONTACT</a></li>
+  </ul>
+</div>
+
+  <nav>
+    <ul>
+      <li><a href="#homeSect" class='link active'>HOME</a></li>
+      <li><a href="#aboutSect" class='link'>ABOUT</a></li>
+      <li><a href="#roomSect" class='link'>ROOMS</a></li>
+      <li><a href="#servicesSect" class='link'>SERVICES</a></li>
+      <li><a href="#gallerySect" class='link'>GALLERY</a></li>
+      <li><a href="#seeNdooSect" class='link'>SEE & DO</a></li>
+      <li><a href="#contactSect" class='link'>CONTACT</a></li>
+      <li class='link-border'><a href="bookingPage.html" class='differentLink'>Book A Room</a></li>
+
+      <li class='burgerHolder' id='burgerHolderId'><div class="burgerCont"><p id='burger'>&#x2630;</p></div></li>
+    </ul>
+  </nav>
+
+
+  <div class="fixedSocCont">
+    <div class="fixedSocContItemCont">
+      <a href="https://www.tripadvisor.com/" target="_blank"><img src="src/tripadvisor.svg" alt="tripadvisor" class='tripadvisor'></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="src/facebook-letter-logo.svg" alt="facebook" class='facebook'></a>
+      <a href="https://www.instagram.com" target="_blank"><img src="src/instagram.svg" alt="instagram" class='instagram'></a>
+    </div>
+  </div>
+
+  <div class="backToTopBtn" id='backToTopBtn'><img src="src/bookingPageSrc/icons8-collapse-arrow-48.png" alt=""></div>
+
+  <div class="fixedChatCont" id='bubbleChat'>
+    <img src="src/iconfinder-icon.svg" alt="chat bubble">
+  </div>
+
+  <div class="fixedChatBigCont" id='fullChatCont'>
+    <div class="closeBtnRoundCont" id='closeBtn'>
+      <div class="closeBtnRound"></div>
+      <p id='closeBtn'>&#10005;</p>
+    </div>
+    <div class="letsChatTxtCont">
+      <h1>Lets Chat!</h1>
+      <span>Ask us any question.</span>
+    </div>
+    <div class="chatSpaceCont"></div>
+    <div class="typeSpaceCont">
+      <img src="src/iconfinder_Streamline-65_185085.svg" alt="emote" class='item'>
+      <textarea name="chatTxt" rows="1" cols="28" placeholder="Type your message..."></textarea>
+      <img src="src/iconfinder_clip-fasten-file-attach-join_3209373.svg" alt="attachFile" class='item'>
+      <img src="src/iconfinder_paper-plane-craft-send-go-start_3643751.svg" alt="Send Paperplane" class='item paperPlane' id='sendPaperPlane'>
+    </div>
+  </div>
+
+  <section class='homeSect' id='homeSect'>
+    <div class="homeTxt">
+      <h1>ANTON & LILY</h1>
+      <h2><span>Bed & Breakfast</span></h2>
+    </div>
+
+    <div class="parallaxImg"></div>
+
+    <form class="homeBookingForm">
+      <div class="labelwInput dateRow">
+        <label for="checkIn" class='checkInInpt'>Check In</label><br><input class='inputFieldDate' type="date" name="checkIn" value="">
+      </div>
+      <div class="labelwInput dateRow">
+        <label for="checkOut" class='checkOutInpt'>Check Out</label><br><input class='inputFieldDate' type="date" name="checkOut" value="">
+      </div>
+      <div class="labelwInput numRow">
+        <label for="adults" class='adlutsInput'>Adults</label><br><input class='inputFieldNumber' type="number" name="adults" value="1" min="0">
+      </div>
+      <div class="labelwInput numRow">
+        <label for="kids" class='kidsInput'>Kids</label><br><input class='inputFieldNumber' type="number" name="kids" value="0" min="0">
+      </div>
+      <button type="button" name="search" class='searchBookingButton'>Search</button>
+    </form>
+  </section>
+
+  <section class='aboutSect' id='aboutSect'>
+    <div class="aboutTxt">
+      <h4>ABOUT</h4>
+      <div class="abouttxtDiv">
+        <p>Yourself required no at thoughts delicate landlord it be. Branched dashwood do is whatever it. Farther be chapter at visited
+          married in it pressed. By distrusts procuring be oh frankness existence believing instantly if. Doubtful on an juvenile as of
+          servants insisted. Judge why maids led sir whose guest drift her point. Him comparison especially friendship was who sufficient.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='roomsSect' id='roomSect'>
+    <div class="parallaxImg">
+      <div class="divOverImg">
+        <h4>OUR ROOMS</h4>
+        <div class="onImgPtxtDiv">
+          <p>Inquietude simplicity terminated she compliment remarkably few her nay. The weeks are ham asked jokes. Neglected perceived shy
+            nay concluded.</p>
+        </div>
+          <button type="button" name="bookARoom"><a href="bookingPage.html">Book A Room</a></button>
+      </div>
+    </div>
+  </section>
+
+  <section class='servicesSect' id='servicesSect'>
+    <h4>OUR SERVICES</h4>
+
+    <div class="servicesflexCont">
+      <div class="flexContItm flexBreakfast">
+        <img src="src/coffee-cup-with-steam.svg" alt="">
+        <h6>Breakfast</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm flexGarden">
+        <img src="src/park.svg" alt="">
+        <h6>Garden</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm flexPool">
+        <img src="src/swimming-pool.svg" alt="">
+        <h6>Pool</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+    </div>
+
+    <div class="servicesflexCont">
+      <div class="flexContItm flexWifi">
+        <img src="src/24px.svg" alt="">
+        <h6>Free Wifi</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm flexKeep">
+        <img src="src/vacuum-cleaner.svg" alt="">
+        <h6>Daily HouseKeeping</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm flexDining">
+        <img src="src/dining-meal-covered.svg" alt="">
+        <h6>In-Room Dining Service</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+    </div>
+  </section>
+
+  <section class='gallerySect' id='gallerySect'>
+    <h4>GALLERY</h4>
+
+    <div class="galleryImgCont">
+      <div class="galleryImgHolder">
+        <div class="firstColfirstImg"></div>
+        <div class="firstColsecondImg"></div>
+      </div>
+
+      <div class="galleryImgHolder">
+        <div class="secColfirstImg"></div>
+        <div class="secColsecondImg"></div>
+      </div>
+
+      <div class="galleryImgHolder">
+        <div class="trdColfirstImg"></div>
+        <div class="trdColsecondImg"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class='seeNdooSect' id='seeNdooSect'>
+    <h4>THINGS TO DO</h4>
+
+    <div class="seeNdooSectflexCont">
+      <div class="flexContItm">
+        <h6>Wineries Tour</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm">
+        <h6>Cultural Sites</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm">
+        <h6>Market Tour</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+    </div>
+
+    <div class="seeNdooSectflexCont">
+      <div class="flexContItm">
+        <h6>Leisure Activities</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm">
+        <h6>Birds Safari</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+      <div class="flexContItm">
+        <h6>Horse Riding</h6>
+        <p>Polite in of in oh needed itself silent course. Polite in of in oh...</p>
+      </div>
+    </div>
+  </section>
+
+<section class='reviewSect' id='reviewSect'>
+  <div class="parallaxImg">
+    <div class="divOverImg">
+      <h4>GUEST REVIEW</h4>
+      <img src="src/quotation-mark.svg" alt="">
+
+        <div class="onImgPtxtDiv">
+          <p>Inquietude simplicity terminated she compliment remarkably few her nay. The weeks are ham asked jokes. Neglected perceived shy
+            nay concluded.</p>
+            <div class="cube active"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class='contactSect' id='contactSect'>
+
+  <h4>CONTACT US</h4>
+
+  <div class="contactTxt">
+    <p>info@mysite.come</p>
+    <p class='hideSlash'>/</p>
+    <p>500 Terry Francois Street, San Francisco, CA 94158</p>
+    <p class='hideSlash'>/</p>
+    <p>Tel: 123-645-9078 </p>
+
+    <div class="SocContBottom">
+      <div class="SocContBottomItemCont">
+        <a href="https://www.tripadvisor.com/" target="_blank"><img src="src/tripadvisor.svg" alt="tripadvisor" class='tripadvisor'></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="src/facebook-letter-logo.svg" alt="facebook" class='facebook'></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="src/instagram.svg" alt="instagram" class='instagram'></a>
+      </div>
+    </div>
+
+  </div>
+
+  <form class="contactSectForm" action="" method="">
+    <ul>
+      <li>
+        <input type="text" name="nameField" placeholder="Name *" class='nameField'>
+        <input type="email" name="emailField" placeholder="Email *" class='emailField'>
+      </li>
+      <li>
+        <input type="text" name="subjectField" placeholder="Subject" class='subjectField'>
+      </li>
+      <li>
+        <textarea name="messageField" rows="10" cols="110"  placeholder="Message" class='messageField'></textarea>
+      </li>
+      <li>
+        <button type="button" name="send">Send</button>
+      </li>
+    </ul>
+  </form>
+
+  <div class="mapDiv">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.0041898846484!2d-78.90841041041315!3d33.66740098602311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x890069e9bf955ab5%3A0x6e84a4964de3cd3d!2sParadise%20Resort!5e0!3m2!1slt!2slt!4v1569782193930!5m2!1slt!2slt"></iframe>
+  </div>
+
+</section>
+
+<footer> <span>© 2019 by Odeta. Recreated from Wix.com template.</span> </footer>
+
+<!-- jquery -->
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>

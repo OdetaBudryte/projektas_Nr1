@@ -1,0 +1,1225 @@
+@font-face {
+  font-family: "Brandon Grot W01 Light";
+  src: url("funconts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.eot");
+  src: url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.eot?#iefix") format("embedded-opentype"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.woff2") format("woff2"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.woff") format("woff"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.ttf") format("truetype"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.svg#Brandon Grot W01 Light") format("svg");
+  /* iOS 4.1- */ }
+@font-face {
+  font-family: "Didot eText W01 Italic";
+  src: url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.eot");
+  /* IE9*/
+  src: url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.eot?#iefix") format("embedded-opentype"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.woff2") format("woff2"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.woff") format("woff"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.ttf") format("truetype"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.svg#Didot eText W01 Italic") format("svg");
+  /* iOS 4.1- */ }
+[type="date"]::-webkit-inner-spin-button {
+  display: none; }
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  margin-right: 10px;
+  cursor: pointer; }
+
+[type="date"] {
+  background: #fff url(src/calendarclear.svg) 135% 50% no-repeat;
+  background-size: 50% 70%; }
+
+[type="number"]::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  width: 20px;
+  height: 30px; }
+
+[type="date"]:-ms-inner-spin-button {
+  display: none; }
+
+[type="date"]:-ms-calendar-picker-indicator {
+  margin-right: 10px;
+  cursor: pointer; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  width: 100%;
+  height: auto; }
+
+body {
+  font-family: "Brandon Grot W01 Light", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+nav {
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  background-color: #242323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 1; }
+  nav ul {
+    list-style-type: none;
+    margin: 30px;
+    padding: 10px; }
+  nav li {
+    display: inline;
+    padding: 10px 0px 10px 0px;
+    margin-left: 10px;
+    margin-right: 10px; }
+    nav li .link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 10px;
+      margin: 5px; }
+      nav li .link:hover {
+        color: #B0B0B0; }
+      nav li .link :focus {
+        color: #B0B0B0; }
+    nav li .active {
+      color: #B0B0B0; }
+    nav li .differentLink {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 20px; }
+      nav li .differentLink:hover {
+        color: black; }
+  nav .link-border {
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    background-color: transparent; }
+    nav .link-border:hover {
+      background-color: white;
+      color: black; }
+  nav .burgerHolder {
+    display: none;
+    margin: 0;
+    padding: 0; }
+    nav .burgerHolder .burgerCont {
+      border: solid 1px white; }
+      nav .burgerHolder .burgerCont p {
+        color: white;
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+        font-weight: 100; }
+
+.fullScreenNavCont {
+  background-color: #242323;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 1s; }
+  .fullScreenNavCont .closeBtnCubeCont {
+    float: right;
+    margin: 20px 25px 0 0; }
+    .fullScreenNavCont .closeBtnCubeCont .closeBtnCube {
+      border: solid 1px white;
+      width: 57.5px;
+      height: 55.6px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .fullScreenNavCont .closeBtnCubeCont .closeBtnCube p {
+        color: white;
+        font-size: 25px; }
+  .fullScreenNavCont .fullScreenNavItems {
+    width: 100%;
+    margin-top: 100px; }
+    .fullScreenNavCont .fullScreenNavItems li {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .fullScreenNavCont .fullScreenNavItems li .active {
+        opacity: 0.5; }
+      .fullScreenNavCont .fullScreenNavItems li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px; }
+        .fullScreenNavCont .fullScreenNavItems li a :focus {
+          color: #B0B0B0; }
+
+.fixedSocCont {
+  background-color: white;
+  height: 222px;
+  position: fixed;
+  right: 0;
+  top: 250px;
+  border-radius: 2px;
+  opacity: 0.9;
+  z-index: 3; }
+  .fixedSocCont .fixedSocContItemCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; }
+    .fixedSocCont .fixedSocContItemCont img {
+      margin: 20px; }
+    .fixedSocCont .fixedSocContItemCont .tripadvisor {
+      width: 28px;
+      height: 28px; }
+    .fixedSocCont .fixedSocContItemCont .facebook {
+      width: 22px;
+      height: 22px; }
+    .fixedSocCont .fixedSocContItemCont .instagram {
+      width: 22px;
+      height: 22px; }
+
+.backToTopBtn {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #191919;
+  width: 45px;
+  height: 45px;
+  left: 80.5%;
+  bottom: 80px;
+  cursor: pointer;
+  z-index: 4; }
+  .backToTopBtn:hover {
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75); }
+  .backToTopBtn img {
+    display: block;
+    margin-left: -1px; }
+
+.fixedChatCont {
+  position: fixed;
+  border-radius: 50%;
+  background-color: #191919;
+  width: 60px;
+  height: 60px;
+  left: 50px;
+  bottom: 15px;
+  cursor: pointer;
+  visibility: visible;
+  z-index: 4; }
+  .fixedChatCont:hover {
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75); }
+  .fixedChatCont img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 14px auto; }
+
+.closeBtnRoundCont {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px; }
+  .closeBtnRoundCont .closeBtnRound {
+    border-radius: 50%;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: white; }
+    .closeBtnRoundCont .closeBtnRound:hover {
+      background-color: #E0E0E0;
+      opacity: 0.2; }
+  .closeBtnRoundCont p {
+    text-align: center;
+    margin-top: 3px;
+    color: white; }
+
+.fixedChatBigCont {
+  left: 20px;
+  bottom: 0;
+  position: fixed;
+  width: 336px;
+  height: 0;
+  z-index: 5;
+  transition: 0.5s; }
+  .fixedChatBigCont .letsChatTxtCont {
+    width: 100%;
+    height: 226px;
+    background-color: #242323;
+    color: #fff;
+    text-align: center;
+    font-family: "Brandon Grot W01 Light", sans-serif;
+    padding-top: 70px;
+    line-height: 35px; }
+    .fixedChatBigCont .letsChatTxtCont h1 {
+      font-size: 22px; }
+  .fixedChatBigCont .chatSpaceCont {
+    background-color: #E2E2E2;
+    width: 100%;
+    height: 222px; }
+  .fixedChatBigCont .typeSpaceCont {
+    width: 100%;
+    height: 57px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white; }
+    .fixedChatBigCont .typeSpaceCont .item {
+      width: 20px;
+      height: 20px;
+      margin: 10px; }
+    .fixedChatBigCont .typeSpaceCont .paperPlane {
+      display: none; }
+    .fixedChatBigCont .typeSpaceCont textarea {
+      resize: none;
+      outline: none;
+      border: none;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      font-size: 20px;
+      width: 80%; }
+
+.homeSect {
+  margin-top: 150px;
+  margin-bottom: 150px; }
+  .homeSect .homeTxt {
+    margin-bottom: 85px;
+    text-align: center; }
+    .homeSect .homeTxt h1 {
+      font-size: 40px;
+      margin-top: 80px;
+      letter-spacing: 2px; }
+    .homeSect .homeTxt h2 {
+      border-bottom: 1px solid #a8a8a8;
+      line-height: 0.1em;
+      margin: 20px auto 20px;
+      width: 250px; }
+      .homeSect .homeTxt h2 span {
+        background: #fff;
+        padding: 0 20px;
+        font-weight: 100;
+        font-size: 20px;
+        color: #696969;
+        font-family: "Didot eText W01 Italic", sans-serif; }
+  .homeSect .parallaxImg {
+    background-image: url("src/design-3588214_1920.jpg");
+    height: 631px;
+    width: 65%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto; }
+  .homeSect .homeBookingForm {
+    width: 95%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; }
+    .homeSect .homeBookingForm .labelwInput {
+      margin-left: 5px; }
+      .homeSect .homeBookingForm .labelwInput label {
+        font-size: 12px; }
+      .homeSect .homeBookingForm .labelwInput input {
+        cursor: pointer;
+        padding-left: 7px;
+        font-family: "Brandon Grot W01 Light", sans-serif;
+        border: 1px solid #bdbdbd; }
+        .homeSect .homeBookingForm .labelwInput input:focus {
+          outline: none;
+          background: white; }
+        .homeSect .homeBookingForm .labelwInput input:hover {
+          background: white; }
+      .homeSect .homeBookingForm .labelwInput .inputFieldDate {
+        width: 270px;
+        height: 35px; }
+      .homeSect .homeBookingForm .labelwInput .inputFieldNumber {
+        width: 90px;
+        height: 35px; }
+    .homeSect .homeBookingForm .searchBookingButton {
+      background-color: #000;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      font-size: 12px;
+      width: 190px;
+      height: 35px;
+      margin-top: 22px;
+      margin-left: 5px;
+      font-family: "Brandon Grot W01 Light", sans-serif; }
+
+.aboutSect {
+  margin-bottom: 200px; }
+  .aboutSect .aboutTxt {
+    text-align: center; }
+    .aboutSect .aboutTxt h4 {
+      font-size: 25px;
+      font-weight: 100; }
+    .aboutSect .aboutTxt .abouttxtDiv {
+      width: 40%;
+      height: 106px;
+      margin: 40px auto 150px; }
+      .aboutSect .aboutTxt .abouttxtDiv p {
+        font-size: 18px;
+        color: #737373;
+        font-style: italic; }
+
+.roomsSect {
+  margin-bottom: 150px; }
+  .roomsSect .parallaxImg {
+    background-image: url("src/villa-1737168_1920.jpg");
+    width: 65%;
+    height: 631px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .roomsSect .parallaxImg .divOverImg {
+      width: 50%;
+      height: 366px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .roomsSect .parallaxImg .divOverImg h4 {
+        font-size: 24px;
+        font-weight: 100; }
+      .roomsSect .parallaxImg .divOverImg .onImgPtxtDiv {
+        width: 85%;
+        height: auto;
+        text-align: center;
+        margin: 33px 0 25px; }
+        .roomsSect .parallaxImg .divOverImg .onImgPtxtDiv p {
+          color: #737373;
+          font-style: italic;
+          font-size: 18px; }
+      .roomsSect .parallaxImg .divOverImg button {
+        background-color: transparent;
+        border: solid 1px black;
+        text-align: center;
+        cursor: pointer;
+        font-size: 12px;
+        width: 142px;
+        height: 42px; }
+        .roomsSect .parallaxImg .divOverImg button a {
+          text-decoration: none;
+          color: black; }
+        .roomsSect .parallaxImg .divOverImg button:hover {
+          background-color: black; }
+          .roomsSect .parallaxImg .divOverImg button:hover a {
+            color: white; }
+
+.servicesSect {
+  margin-bottom: 150px; }
+  .servicesSect h4 {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center; }
+  .servicesSect .servicesflexCont {
+    width: 62%;
+    height: auto;
+    margin: 35px auto 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .servicesSect .servicesflexCont .flexContItm {
+      text-align: center;
+      margin: 10px; }
+    .servicesSect .servicesflexCont img {
+      height: 25px;
+      width: 25px; }
+    .servicesSect .servicesflexCont h6 {
+      font-size: 18px;
+      margin: 5px 0 25px; }
+    .servicesSect .servicesflexCont p {
+      font-size: 18px;
+      color: #737373;
+      font-style: italic; }
+
+.gallerySect {
+  margin-bottom: 150px;
+  width: 100%; }
+  .gallerySect h4 {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center; }
+  .gallerySect .galleryImgCont {
+    text-align: center;
+    z-index: 0; }
+    .gallerySect .galleryImgCont .galleryImgHolder {
+      display: inline-block;
+      width: 21%;
+      height: 635px;
+      margin: 35px 2px 5px 2px; }
+      .gallerySect .galleryImgCont .galleryImgHolder:hover {
+        opacity: 0.7; }
+      .gallerySect .galleryImgCont .galleryImgHolder .firstColfirstImg {
+        position: absolute;
+        width: 21%;
+        height: 630px;
+        background: url("src/185935976.jpg") no-repeat center;
+        background-size: cover;
+        animation: fade 15s infinite;
+        -webkit-animation: fade 15s infinite; }
+      .gallerySect .galleryImgCont .galleryImgHolder .firstColsecondImg {
+        position: absolute;
+        width: 21%;
+        height: 630px;
+        background: url("src/181697821.jpg") no-repeat center;
+        background-size: cover;
+        animation: fade2 15s infinite;
+        -webkit-animation: fade2 15s infinite; }
+      .gallerySect .galleryImgCont .galleryImgHolder .secColfirstImg {
+        position: absolute;
+        width: 21%;
+        height: 630px;
+        background: url("src/185936020.jpg") no-repeat center;
+        background-size: cover;
+        animation: fade 15s infinite;
+        -webkit-animation: fade 15s infinite; }
+      .gallerySect .galleryImgCont .galleryImgHolder .secColsecondImg {
+        position: absolute;
+        width: 21%;
+        height: 630px;
+        background: url("src/185935973.jpg") no-repeat center;
+        background-size: cover;
+        animation: fade2 15s infinite;
+        -webkit-animation: fade2 15s infinite; }
+      .gallerySect .galleryImgCont .galleryImgHolder .trdColfirstImg {
+        position: absolute;
+        width: 21%;
+        height: 630px;
+        background: url("src/185936651.jpg") no-repeat center;
+        background-size: cover;
+        animation: fade 15s infinite;
+        -webkit-animation: fade 15s infinite; }
+      .gallerySect .galleryImgCont .galleryImgHolder .trdColsecondImg {
+        position: absolute;
+        width: 21%;
+        height: 630px;
+        background: url("src/181697861.jpg") no-repeat center;
+        background-size: cover;
+        animation: fade2 15s infinite;
+        -webkit-animation: fade2 15s infinite; }
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1; }
+  33.333% {
+    opacity: 0; }
+  66.666% {
+    opacity: 0.7; }
+  100% {
+    opacity: 1; } }
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  33.333% {
+    opacity: 0; }
+  66.666% {
+    opacity: 0.7; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fade2 {
+  0% {
+    opacity: 0; }
+  33.333% {
+    opacity: 0.9; }
+  66.666% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes fade2 {
+  0% {
+    opacity: 0; }
+  33.333% {
+    opacity: 0.9; }
+  66.666% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+.seeNdooSect {
+  margin-bottom: 150px; }
+  .seeNdooSect h4 {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center; }
+  .seeNdooSect .seeNdooSectflexCont {
+    width: 62%;
+    height: auto;
+    margin: 35px auto 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    .seeNdooSect .seeNdooSectflexCont .flexContItm {
+      text-align: center;
+      margin: 10px; }
+    .seeNdooSect .seeNdooSectflexCont h6 {
+      font-size: 18px;
+      margin: 5px 0 25px; }
+    .seeNdooSect .seeNdooSectflexCont p {
+      font-size: 18px;
+      color: #737373;
+      font-style: italic; }
+
+.reviewSect {
+  margin-bottom: 150px; }
+  .reviewSect .parallaxImg {
+    background-image: url("src/sunlight-166733_1920.jpg");
+    width: 65%;
+    height: 631px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .reviewSect .parallaxImg .divOverImg {
+      width: 50%;
+      height: 366px;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .reviewSect .parallaxImg .divOverImg h4 {
+        font-size: 24px;
+        font-weight: 100;
+        margin-bottom: 20px; }
+      .reviewSect .parallaxImg .divOverImg img {
+        width: 17px;
+        height: 17px; }
+      .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv {
+        width: 85%;
+        height: auto;
+        text-align: center;
+        margin: 33px 0 25px; }
+        .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv p {
+          color: #737373;
+          font-style: italic;
+          font-size: 18px; }
+        .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv .cube {
+          background-color: black;
+          border-radius: 3px;
+          width: 8px;
+          height: 8px;
+          display: inline-block;
+          margin: 35px 0 0 5px; }
+        .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv .active {
+          opacity: 0.5; }
+
+.contactSect {
+  width: 100%;
+  height: auto;
+  background-color: #F0F0F0;
+  padding-top: 110px; }
+  .contactSect h4 {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center; }
+  .contactSect .contactTxt {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .contactSect .contactTxt p {
+      font-size: 18px;
+      font-style: italic;
+      color: #737373;
+      margin: 50px 10px 50px; }
+    .contactSect .contactTxt .SocContBottom {
+      display: none; }
+  .contactSect form {
+    margin-bottom: 90px; }
+    .contactSect form ul {
+      text-align: center;
+      list-style: none; }
+    .contactSect form li {
+      margin: 12px; }
+    .contactSect form input {
+      width: 21%;
+      height: 30px;
+      border: none;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      padding-left: 7px; }
+      .contactSect form input::-webkit-input-placeholder {
+        color: black; }
+      .contactSect form input::-moz-placeholder {
+        color: black; }
+      .contactSect form input:-ms-input-placeholder {
+        color: black; }
+      .contactSect form input::-ms-input-placeholder {
+        color: black; }
+      .contactSect form input::placeholder {
+        color: black; }
+      .contactSect form input:focus {
+        outline: none; }
+    .contactSect form .subjectField {
+      width: 42%; }
+      .contactSect form .subjectField::-webkit-input-placeholder {
+        color: black; }
+      .contactSect form .subjectField::-moz-placeholder {
+        color: black; }
+      .contactSect form .subjectField:-ms-input-placeholder {
+        color: black; }
+      .contactSect form .subjectField::-ms-input-placeholder {
+        color: black; }
+      .contactSect form .subjectField::placeholder {
+        color: black; }
+    .contactSect form textarea {
+      width: 42%;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      border: none;
+      resize: none;
+      padding-left: 7px; }
+      .contactSect form textarea::-webkit-input-placeholder {
+        color: black; }
+      .contactSect form textarea::-moz-placeholder {
+        color: black; }
+      .contactSect form textarea:-ms-input-placeholder {
+        color: black; }
+      .contactSect form textarea::-ms-input-placeholder {
+        color: black; }
+      .contactSect form textarea::placeholder {
+        color: black; }
+      .contactSect form textarea:focus {
+        outline: none; }
+    .contactSect form button {
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      background-color: #000;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      width: 42%;
+      height: 45px;
+      margin: 0 0 15px; }
+      .contactSect form button:focus {
+        outline: none; }
+  .contactSect .mapDiv {
+    height: 695px;
+    width: 100%;
+    margin: 0; }
+    .contactSect .mapDiv iframe {
+      height: 695px;
+      width: 100%;
+      border: none; }
+
+footer {
+  background-color: black;
+  color: #F5F5F5;
+  font-size: 14px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .backToTopBtn {
+    display: block; }
+
+  nav {
+    height: 91px;
+    position: absolute; }
+    nav ul {
+      margin: 0;
+      padding: 0; }
+      nav ul li {
+        margin: 0; }
+        nav ul li .link {
+          display: none; }
+      nav ul .link-border {
+        position: absolute;
+        left: 20px;
+        margin-top: -30px;
+        padding: 15px 40px; }
+        nav ul .link-border .differentLink {
+          margin: 5px; }
+      nav ul .burgerHolder {
+        display: block;
+        position: absolute;
+        right: 20px;
+        margin-top: -30px;
+        width: 18%;
+        text-align: center; }
+        nav ul .burgerHolder .burgerCont {
+          height: 54px; }
+          nav ul .burgerHolder .burgerCont p {
+            margin-top: 6px;
+            font-size: 30px; }
+
+  .fullScreenNavCont {
+    background-color: #242323;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 1s; }
+    .fullScreenNavCont .closeBtnCubeCont {
+      float: right;
+      margin: 20px 25px 0 0; }
+      .fullScreenNavCont .closeBtnCubeCont .closeBtnCube {
+        border: solid 1px white;
+        width: 57.5px;
+        height: 55.6px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .fullScreenNavCont .closeBtnCubeCont .closeBtnCube p {
+          color: white;
+          font-size: 25px; }
+    .fullScreenNavCont .fullScreenNavItems {
+      width: 100%;
+      margin-top: 100px; }
+      .fullScreenNavCont .fullScreenNavItems li {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .fullScreenNavCont .fullScreenNavItems li .active {
+          opacity: 0.5; }
+        .fullScreenNavCont .fullScreenNavItems li a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 15px; }
+          .fullScreenNavCont .fullScreenNavItems li a :focus {
+            color: #B0B0B0; }
+
+  .fixedSocCont {
+    display: none; }
+
+  .fixedChatCont {
+    width: 50px;
+    height: 50px;
+    left: 80%; }
+    .fixedChatCont img {
+      margin: 10px auto; }
+
+  .fixedChatBigCont {
+    width: 100%;
+    height: 0;
+    left: 0;
+    z-index: 5; }
+    .fixedChatBigCont .closeBtnRoundCont {
+      top: 5px;
+      right: 10px; }
+      .fixedChatBigCont .closeBtnRoundCont p {
+        margin-top: 4px; }
+    .fixedChatBigCont .letsChatTxtCont {
+      height: 30%; }
+      .fixedChatBigCont .letsChatTxtCont h1 {
+        font-size: 20px; }
+    .fixedChatBigCont .chatSpaceCont {
+      height: 60%; }
+    .fixedChatBigCont .typeSpaceCont {
+      height: 10%; }
+
+  .homeSect {
+    margin-top: 115px;
+    margin-bottom: 30px; }
+    .homeSect .homeTxt {
+      margin-bottom: 30px; }
+      .homeSect .homeTxt h1 {
+        font-size: 24px; }
+      .homeSect .homeTxt h2 {
+        width: 80%; }
+        .homeSect .homeTxt h2 span {
+          padding: 0 15px;
+          font-size: 16px; }
+    .homeSect .parallaxImg {
+      width: 100%;
+      height: 240px;
+      background-attachment: local; }
+    .homeSect .homeBookingForm {
+      margin: 30px 0; }
+      .homeSect .homeBookingForm .labelwInput {
+        margin-bottom: 10px;
+        margin-top: 10px; }
+        .homeSect .homeBookingForm .labelwInput label {
+          border: solid 1px gray;
+          border-radius: 3px;
+          padding: 5px 30px; }
+        .homeSect .homeBookingForm .labelwInput .checkInInpt {
+          padding: 5px 55px; }
+        .homeSect .homeBookingForm .labelwInput .checkOutInpt {
+          padding: 5px 50px; }
+        .homeSect .homeBookingForm .labelwInput .adlutsInput {
+          padding: 5px 136px; }
+        .homeSect .homeBookingForm .labelwInput .kidsInput {
+          padding: 5px  141px; }
+        .homeSect .homeBookingForm .labelwInput input {
+          border: solid 1px gray;
+          border-radius: 2px;
+          background: white; }
+        .homeSect .homeBookingForm .labelwInput .inputFieldDate {
+          width: 100%;
+          height: 50px;
+          text-align: center; }
+          .homeSect .homeBookingForm .labelwInput .inputFieldDate ::-webkit-calendar-picker-indicator {
+            opacity: 0; }
+        .homeSect .homeBookingForm .labelwInput .inputFieldNumber {
+          width: 100%;
+          height: 35px;
+          text-align: left;
+          padding-left: 10px; }
+      .homeSect .homeBookingForm .searchBookingButton {
+        font-size: 16px;
+        width: 50%;
+        height: 50px;
+        margin-top: 10px;
+        border-radius: 3px; }
+
+  .aboutSect {
+    margin-bottom: 30px; }
+    .aboutSect .aboutTxt h4 {
+      font-size: 20px; }
+    .aboutSect .aboutTxt .abouttxtDiv {
+      width: 65%;
+      height: auto; }
+      .aboutSect .aboutTxt .abouttxtDiv p {
+        font-size: 16px; }
+
+  .roomsSect {
+    margin-bottom: 30px; }
+    .roomsSect .parallaxImg {
+      width: 100%;
+      height: 360px;
+      background-attachment: local; }
+      .roomsSect .parallaxImg .divOverImg {
+        width: 80%;
+        height: 305px; }
+        .roomsSect .parallaxImg .divOverImg h4 {
+          font-size: 20px; }
+        .roomsSect .parallaxImg .divOverImg .onImgPtxtDiv {
+          width: 90%;
+          height: 120px;
+          margin: 10px 5px; }
+          .roomsSect .parallaxImg .divOverImg .onImgPtxtDiv p {
+            font-size: 16px; }
+        .roomsSect .parallaxImg .divOverImg button {
+          font-size: 15px;
+          width: 80%;
+          height: 50px; }
+
+  .servicesSect {
+    margin-bottom: 30px; }
+    .servicesSect h4 {
+      font-size: 20px;
+      margin-bottom: 20px; }
+    .servicesSect .servicesflexCont {
+      width: 100%;
+      margin: 0;
+      justify-content: center;
+      flex-direction: column; }
+      .servicesSect .servicesflexCont .flexContItm {
+        margin: 20px 20px; }
+      .servicesSect .servicesflexCont h6 {
+        font-size: 16px;
+        margin: 0 0 10px 0; }
+      .servicesSect .servicesflexCont p {
+        font-size: 16px; }
+
+  .gallerySect {
+    margin-bottom: 30px; }
+    .gallerySect h4 {
+      font-size: 20px; }
+    .gallerySect .galleryImgCont {
+      margin: 30px 0 0 0; }
+      .gallerySect .galleryImgCont .galleryImgHolder {
+        width: 100%;
+        height: 203px; }
+        .gallerySect .galleryImgCont .galleryImgHolder:hover {
+          opacity: 1; }
+        .gallerySect .galleryImgCont .galleryImgHolder .firstColfirstImg {
+          width: 45%;
+          height: 202px;
+          margin: 5px 7px;
+          animation: none;
+          -webkit-animation: none; }
+          .gallerySect .galleryImgCont .galleryImgHolder .firstColfirstImg:hover {
+            opacity: 0.7; }
+        .gallerySect .galleryImgCont .galleryImgHolder .firstColsecondImg {
+          width: 45%;
+          height: 202px;
+          right: 0;
+          margin: 5px 7px;
+          animation: none;
+          -webkit-animation: none; }
+          .gallerySect .galleryImgCont .galleryImgHolder .firstColsecondImg:hover {
+            opacity: 0.7; }
+        .gallerySect .galleryImgCont .galleryImgHolder .secColfirstImg {
+          width: 45%;
+          height: 202px;
+          margin: 5px 7px;
+          animation: none;
+          -webkit-animation: none; }
+          .gallerySect .galleryImgCont .galleryImgHolder .secColfirstImg:hover {
+            opacity: 0.7; }
+        .gallerySect .galleryImgCont .galleryImgHolder .secColsecondImg {
+          width: 45%;
+          height: 202px;
+          right: 0;
+          margin: 5px 7px;
+          animation: none;
+          -webkit-animation: none; }
+          .gallerySect .galleryImgCont .galleryImgHolder .secColsecondImg:hover {
+            opacity: 0.7; }
+        .gallerySect .galleryImgCont .galleryImgHolder .trdColfirstImg {
+          width: 45%;
+          height: 202px;
+          margin: 5px 7px;
+          animation: none;
+          -webkit-animation: none; }
+          .gallerySect .galleryImgCont .galleryImgHolder .trdColfirstImg:hover {
+            opacity: 0.7; }
+        .gallerySect .galleryImgCont .galleryImgHolder .trdColsecondImg {
+          width: 45%;
+          height: 202px;
+          right: 0;
+          margin: 5px 7px;
+          animation: none;
+          -webkit-animation: none; }
+          .gallerySect .galleryImgCont .galleryImgHolder .trdColsecondImg:hover {
+            opacity: 0.7; }
+
+  .seeNdooSect {
+    margin-bottom: 30px; }
+    .seeNdooSect h4 {
+      font-size: 20px;
+      margin-bottom: 20px; }
+    .seeNdooSect .seeNdooSectflexCont {
+      width: 100%;
+      margin: 0 0 0 2px;
+      justify-content: center;
+      flex-direction: column; }
+      .seeNdooSect .seeNdooSectflexCont h6 {
+        font-size: 16px;
+        margin: 15px 0 10px 0; }
+      .seeNdooSect .seeNdooSectflexCont p {
+        font-size: 16px; }
+
+  .reviewSect {
+    margin-bottom: 0; }
+    .reviewSect .parallaxImg {
+      width: 100%;
+      height: 360px;
+      background-attachment: local; }
+      .reviewSect .parallaxImg .divOverImg {
+        width: 80%;
+        height: 305px; }
+        .reviewSect .parallaxImg .divOverImg h4 {
+          font-size: 20px; }
+        .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv {
+          margin: 10px 0 10px;
+          width: 90%;
+          height: 120px; }
+          .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv p {
+            font-size: 16px; }
+          .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv .cube {
+            margin: 20px 0 0 0; }
+
+  .contactSect {
+    padding-top: 50px; }
+    .contactSect h4 {
+      font-size: 20px; }
+    .contactSect .contactTxt {
+      width: 100%;
+      flex-direction: column;
+      margin: 5px 0; }
+      .contactSect .contactTxt p {
+        font-size: 16px;
+        width: 65%;
+        text-align: center;
+        margin: 15px 5px; }
+      .contactSect .contactTxt .hideSlash {
+        display: none; }
+      .contactSect .contactTxt .SocContBottom {
+        display: inline;
+        background-color: transparent;
+        width: 60%;
+        height: auto;
+        margin-bottom: 10px; }
+        .contactSect .contactTxt .SocContBottom .SocContBottomItemCont {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont img {
+            margin: 3px 20px; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont .tripadvisor {
+            width: 25px;
+            height: 25px; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont .facebook {
+            width: 20px;
+            height: 20px; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont .instagram {
+            width: 20px;
+            height: 20px; }
+    .contactSect .contactSectForm ul li input {
+      width: 100%;
+      height: 44px;
+      border-radius: 2px;
+      font-size: 15px;
+      padding-left: 7px;
+      margin-top: 10px; }
+    .contactSect .contactSectForm ul li .subjectField {
+      margin-top: 0px; }
+    .contactSect .contactSectForm ul li .messageField {
+      width: 100%;
+      padding-top: 10px;
+      font-size: 15px;
+      border-radius: 2px; }
+    .contactSect .contactSectForm ul li button {
+      width: 100%;
+      margin-bottom: 0; }
+    .contactSect .mapDiv {
+      width: 100%;
+      height: 300px;
+      margin: 0; }
+      .contactSect .mapDiv iframe {
+        width: 100%;
+        height: 100%;
+        border: none; }
+
+  footer {
+    font-size: 15px;
+    height: 100px;
+    align-items: flex-start; }
+    footer span {
+      width: 90%;
+      text-align: center;
+      margin-top: 7px; } }
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .fullScreenNavCont .closeBtnCubeCont {
+    margin: 20px 19px 0 0; }
+    .fullScreenNavCont .closeBtnCubeCont .closeBtnCube {
+      width: 73px; }
+  .fullScreenNavCont .fullScreenNavItems li {
+    margin: 20px; }
+    .fullScreenNavCont .fullScreenNavItems li a {
+      font-size: 20px; }
+
+  nav {
+    height: 91px;
+    position: absolute; }
+    nav ul {
+      margin: 0;
+      padding: 0; }
+      nav ul li {
+        margin: 0; }
+        nav ul li .link {
+          display: none; }
+      nav ul .link-border {
+        position: absolute;
+        left: 20px;
+        margin-top: -30px;
+        padding: 15px 50px; }
+        nav ul .link-border .differentLink {
+          margin: 5px; }
+      nav ul .burgerHolder {
+        display: block;
+        position: absolute;
+        right: 20px;
+        margin-top: -30px;
+        width: 10%;
+        text-align: center; }
+        nav ul .burgerHolder .burgerCont {
+          height: 54px; }
+          nav ul .burgerHolder .burgerCont p {
+            margin-top: 6px;
+            font-size: 30px; }
+
+  .homeSect .parallaxImg {
+    width: 65%;
+    height: 500px; }
+  .homeSect .homeBookingForm .labelwInput {
+    padding: 3px; }
+  .homeSect .homeBookingForm .dateRow {
+    width: 34%; }
+    .homeSect .homeBookingForm .dateRow .inputFieldDate {
+      width: 100%; }
+  .homeSect .homeBookingForm .numRow {
+    width: 34%; }
+    .homeSect .homeBookingForm .numRow .inputFieldNumber {
+      width: 100%; }
+  .homeSect .homeBookingForm .searchBookingButton {
+    width: 40%; }
+
+  .aboutSect {
+    margin-bottom: 170px; }
+    .aboutSect .aboutTxt .abouttxtDiv {
+      width: 50%;
+      height: auto;
+      margin: 40px auto; }
+
+  .roomsSect .parallaxImg {
+    width: 65%;
+    height: 500px; }
+    .roomsSect .parallaxImg .divOverImg {
+      width: 65%;
+      height: 350px; }
+      .roomsSect .parallaxImg .divOverImg .onImgPtxtDiv {
+        width: 85%;
+        height: auto;
+        margin: 15px; }
+
+  .gallerySect .galleryImgCont .galleryImgHolder {
+    width: 20%;
+    height: 380px; }
+    .gallerySect .galleryImgCont .galleryImgHolder .firstColfirstImg {
+      width: 20%;
+      height: 380px; }
+    .gallerySect .galleryImgCont .galleryImgHolder .firstColsecondImg {
+      width: 20%;
+      height: 380px; }
+    .gallerySect .galleryImgCont .galleryImgHolder .secColfirstImg {
+      width: 20%;
+      height: 380px; }
+    .gallerySect .galleryImgCont .galleryImgHolder .secColsecondImg {
+      width: 20%;
+      height: 380px; }
+    .gallerySect .galleryImgCont .galleryImgHolder .trdColfirstImg {
+      width: 20%;
+      height: 380px; }
+    .gallerySect .galleryImgCont .galleryImgHolder .trdColsecondImg {
+      width: 20%;
+      height: 380px; }
+
+  .reviewSect .parallaxImg {
+    width: 65%;
+    height: 500px; }
+    .reviewSect .parallaxImg .divOverImg {
+      width: 65%;
+      height: 350px; }
+      .reviewSect .parallaxImg .divOverImg .onImgPtxtDiv {
+        width: 85%;
+        height: auto;
+        margin: 5px; }
+
+  .contactSect h4 {
+    margin-bottom: 30px; }
+  .contactSect .contactTxt {
+    flex-wrap: wrap;
+    margin-bottom: 30px; }
+    .contactSect .contactTxt p {
+      margin: 10px 10px 10px; }
+    .contactSect .contactTxt .hideSlash {
+      display: none; }
+
+  .contactSectForm ul li input {
+    width: 30%; }
+  .contactSectForm ul li .subjectField {
+    width: 60.5%; }
+  .contactSectForm ul li textarea {
+    width: 60.5%; }
+  .contactSectForm ul li button {
+    width: 60.5%; } }
+
+/*# sourceMappingURL=mainPage.css.map */

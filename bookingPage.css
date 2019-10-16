@@ -1,0 +1,947 @@
+@font-face {
+  font-family: "Brandon Grot W01 Light";
+  src: url("funconts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.eot");
+  src: url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.eot?#iefix") format("embedded-opentype"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.woff2") format("woff2"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.woff") format("woff"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.ttf") format("truetype"), url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.svg#Brandon Grot W01 Light") format("svg");
+  /* iOS 4.1- */ }
+@font-face {
+  font-family: "Didot eText W01 Italic";
+  src: url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.eot");
+  /* IE9*/
+  src: url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.eot?#iefix") format("embedded-opentype"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.woff2") format("woff2"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.woff") format("woff"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.ttf") format("truetype"), url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.svg#Didot eText W01 Italic") format("svg");
+  /* iOS 4.1- */ }
+[type="date"]::-webkit-inner-spin-button {
+  display: none; }
+
+[type="date"]::-webkit-calendar-picker-indicator {
+  margin-right: 10px;
+  cursor: pointer; }
+
+[type="number"]::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  width: 20px;
+  height: 30px; }
+
+[type="date"]:-ms-inner-spin-button {
+  display: none; }
+
+[type="date"]:-ms-calendar-picker-indicator {
+  margin-right: 10px;
+  cursor: pointer; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+html {
+  width: 100%;
+  height: auto; }
+
+body {
+  font-family: "Brandon Grot W01 Light", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  background-color: #242323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 5; }
+  nav ul {
+    list-style-type: none;
+    margin: 30px;
+    padding: 10px; }
+  nav li {
+    display: inline;
+    padding: 10px 0px 10px 0px;
+    margin-left: 10px;
+    margin-right: 10px; }
+    nav li .link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 10px;
+      margin: 5px; }
+      nav li .link:hover {
+        color: #B0B0B0; }
+      nav li .link :focus {
+        color: #B0B0B0; }
+    nav li .active {
+      color: #B0B0B0; }
+    nav li .differentLink {
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 20px; }
+      nav li .differentLink:hover {
+        color: black; }
+  nav .link-border {
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    background-color: transparent; }
+    nav .link-border:hover {
+      background-color: white;
+      color: black; }
+  nav .burgerHolder {
+    display: none;
+    margin: 0;
+    padding: 0; }
+    nav .burgerHolder .burgerCont {
+      border: solid 1px white; }
+      nav .burgerHolder .burgerCont p {
+        color: white;
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+        font-weight: 100; }
+
+.fullScreenNavCont {
+  background-color: #242323;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 1s; }
+  .fullScreenNavCont .closeBtnCubeCont {
+    float: right;
+    margin: 20px 25px 0 0; }
+    .fullScreenNavCont .closeBtnCubeCont .closeBtnCube {
+      border: solid 1px white;
+      width: 57.5px;
+      height: 55.6px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .fullScreenNavCont .closeBtnCubeCont .closeBtnCube p {
+        color: white;
+        font-size: 25px; }
+  .fullScreenNavCont .fullScreenNavItems {
+    width: 100%;
+    margin-top: 100px; }
+    .fullScreenNavCont .fullScreenNavItems li {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .fullScreenNavCont .fullScreenNavItems li .active {
+        opacity: 0.5; }
+      .fullScreenNavCont .fullScreenNavItems li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 15px; }
+        .fullScreenNavCont .fullScreenNavItems li a :focus {
+          color: #B0B0B0; }
+
+.fixedSocCont {
+  background-color: white;
+  height: 222px;
+  position: fixed;
+  right: 0;
+  top: 250px;
+  border-radius: 2px;
+  opacity: 0.9;
+  z-index: 3; }
+  .fixedSocCont .fixedSocContItemCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; }
+    .fixedSocCont .fixedSocContItemCont img {
+      margin: 20px; }
+    .fixedSocCont .fixedSocContItemCont .tripadvisor {
+      width: 28px;
+      height: 28px; }
+    .fixedSocCont .fixedSocContItemCont .facebook {
+      width: 22px;
+      height: 22px; }
+    .fixedSocCont .fixedSocContItemCont .instagram {
+      width: 22px;
+      height: 22px; }
+
+.backToTopBtn {
+  display: none;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #191919;
+  width: 45px;
+  height: 45px;
+  left: 80.5%;
+  bottom: 80px;
+  cursor: pointer;
+  z-index: 4; }
+  .backToTopBtn:hover {
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75); }
+  .backToTopBtn img {
+    display: block;
+    margin-left: -1px; }
+
+.fixedChatCont {
+  position: fixed;
+  border-radius: 50%;
+  background-color: #191919;
+  width: 60px;
+  height: 60px;
+  left: 50px;
+  bottom: 15px;
+  cursor: pointer;
+  visibility: visible;
+  z-index: 4; }
+  .fixedChatCont:hover {
+    box-shadow: 0px 0px 20px -6px rgba(0, 0, 0, 0.75); }
+  .fixedChatCont img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 14px auto; }
+
+.closeBtnRoundCont {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px; }
+  .closeBtnRoundCont .closeBtnRound {
+    border-radius: 50%;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: white; }
+    .closeBtnRoundCont .closeBtnRound:hover {
+      background-color: #E0E0E0;
+      opacity: 0.2; }
+  .closeBtnRoundCont p {
+    text-align: center;
+    margin-top: 3px;
+    color: white; }
+
+.fixedChatBigCont {
+  left: 20px;
+  bottom: 0;
+  position: fixed;
+  width: 336px;
+  height: 0;
+  z-index: 5;
+  transition: 0.5s; }
+  .fixedChatBigCont .letsChatTxtCont {
+    width: 100%;
+    height: 226px;
+    background-color: #242323;
+    color: #fff;
+    text-align: center;
+    font-family: "Brandon Grot W01 Light", sans-serif;
+    padding-top: 70px;
+    line-height: 35px; }
+    .fixedChatBigCont .letsChatTxtCont h1 {
+      font-size: 22px; }
+  .fixedChatBigCont .chatSpaceCont {
+    background-color: #E2E2E2;
+    width: 100%;
+    height: 225px; }
+  .fixedChatBigCont .typeSpaceCont {
+    width: 100%;
+    height: 57px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white; }
+    .fixedChatBigCont .typeSpaceCont .item {
+      width: 20px;
+      height: 20px;
+      margin: 10px; }
+    .fixedChatBigCont .typeSpaceCont .paperPlane {
+      display: none; }
+    .fixedChatBigCont .typeSpaceCont textarea {
+      resize: none;
+      outline: none;
+      border: none;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      font-size: 20px;
+      width: 80%; }
+
+.roomsBookingSec {
+  margin: 200px auto 150px auto;
+  width: 65%;
+  height: auto; }
+  .roomsBookingSec .selectDatesBtn {
+    display: none; }
+  .roomsBookingSec h2 {
+    color: #242323;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px; }
+  .roomsBookingSec hr {
+    border: solid 0.5px #D3D3D3;
+    margin: 10px 0 10px 0; }
+  .roomsBookingSec .homeBookingForm {
+    width: 100%;
+    height: auto;
+    margin: 20px 0 20px 0;
+    text-align: center; }
+    .roomsBookingSec .homeBookingForm input {
+      width: 20%;
+      height: 35px;
+      padding-left: 7px;
+      border: solid 1px #bdbdbd;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      font-size: 12px; }
+      .roomsBookingSec .homeBookingForm input:focus {
+        outline: none; }
+      .roomsBookingSec .homeBookingForm input::-webkit-input-placeholder {
+        font-size: 12px;
+        color: #000; }
+      .roomsBookingSec .homeBookingForm input::-moz-placeholder {
+        font-size: 12px;
+        color: #000; }
+      .roomsBookingSec .homeBookingForm input:-ms-input-placeholder {
+        font-size: 12px;
+        color: #000; }
+      .roomsBookingSec .homeBookingForm input::-ms-input-placeholder {
+        font-size: 12px;
+        color: #000; }
+      .roomsBookingSec .homeBookingForm input::placeholder {
+        font-size: 12px;
+        color: #000; }
+    .roomsBookingSec .homeBookingForm button {
+      background-color: #000;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      font-size: 15px;
+      width: 18%;
+      height: 35px;
+      margin-top: 10px;
+      font-family: "Brandon Grot W01 Light", sans-serif; }
+  .roomsBookingSec .roomsInfoCont {
+    width: 100%;
+    height: auto; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi {
+      list-style-type: none;
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 37px 0; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg {
+        flex: none;
+        width: 25%;
+        height: auto;
+        position: relative;
+        cursor: pointer; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg .moreInfoBtnSlide {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 35%;
+          height: 5px;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: .4s ease; }
+          .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg .moreInfoBtnSlide p {
+            display: none;
+            font-size: 12px;
+            margin: 8px 8px;
+            text-align: center; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg:hover .moreInfoBtnSlide {
+          height: 20%; }
+          .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg:hover .moreInfoBtnSlide p {
+            display: block; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText {
+        flex: none;
+        width: 50%;
+        height: auto;
+        margin: 0px 15px;
+        padding: 0px 10px;
+        position: relative; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText a {
+          text-decoration: none;
+          color: #242323;
+          font-size: 20px;
+          font-weight: bold; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText p {
+          font-size: 12px;
+          width: 100%;
+          margin: 10px 0 10px 0; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .features {
+          height: auto;
+          margin: 20px 0; }
+          .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .features .featuresLi {
+            height: auto;
+            font-size: 12px;
+            list-style: none; }
+            .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .features .featuresLi::before {
+              content: '';
+              display: inline-block;
+              margin-right: 10px;
+              height: 4px;
+              width: 4px;
+              background-color: black;
+              border: solid 1px black;
+              border-radius: 3px; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText hr {
+          border: solid 0.5px #D3D3D3;
+          margin: 4px; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont {
+          display: flex;
+          margin-top: 2px;
+          height: auto;
+          flex-wrap: wrap; }
+          .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt {
+            position: relative; }
+            .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt:hover .tooltiptext {
+              visibility: visible; }
+            .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .amenity {
+              width: 27px;
+              height: 27px;
+              margin: 2px 8px; }
+            .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .showerIcon {
+              width: 32px;
+              height: 32px; }
+            .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .bathIcon {
+              width: 33px;
+              height: 33px; }
+            .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .tooltiptext {
+              visibility: hidden;
+              background-color: white;
+              color: #000;
+              border: solid 1px #E0E0E0;
+              text-align: center;
+              font-size: 13px;
+              border-radius: 3px;
+              height: 30px;
+              width: 73px;
+              padding: 5px 5px;
+              position: absolute;
+              top: -34px;
+              left: -15px; }
+              .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .tooltiptext::after {
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #E0E0E0 transparent transparent transparent; }
+              .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .tooltiptext::before {
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -4px;
+                border-width: 4px;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+                z-index: 2; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice {
+        flex: none;
+        width: 20%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 40px; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice p {
+          font-size: 12px; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice h2 {
+          font-size: 35px;
+          color: #000; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice button {
+          background-color: #000;
+          border: none;
+          color: white;
+          text-align: center;
+          cursor: pointer;
+          font-size: 16px;
+          width: 80%;
+          height: 35px;
+          margin-top: 10px;
+          font-family: "Brandon Grot W01 Light", sans-serif; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice img {
+          display: none; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .firstInfoImg {
+        background-image: url("src/bookingPageSrc/bedroom-3102376_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .secondInfoImg {
+        background-image: url("src/bookingPageSrc/hotel-3102375_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .thirdInfoImg {
+        background-image: url("src/bookingPageSrc/hotel-room-1447201_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%; }
+
+.contactSect {
+  width: 100%;
+  height: auto;
+  background-color: #F0F0F0;
+  padding-top: 110px; }
+  .contactSect h4 {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center; }
+  .contactSect .contactTxt {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .contactSect .contactTxt p {
+      font-size: 18px;
+      font-style: italic;
+      color: #737373;
+      margin: 50px 10px 50px; }
+    .contactSect .contactTxt .SocContBottom {
+      display: none; }
+  .contactSect form {
+    margin-bottom: 90px; }
+    .contactSect form ul {
+      text-align: center;
+      list-style: none; }
+    .contactSect form li {
+      margin: 12px; }
+    .contactSect form input {
+      width: 21%;
+      height: 30px;
+      border: none;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      padding-left: 7px; }
+      .contactSect form input::-webkit-input-placeholder {
+        color: black; }
+      .contactSect form input::-moz-placeholder {
+        color: black; }
+      .contactSect form input:-ms-input-placeholder {
+        color: black; }
+      .contactSect form input::-ms-input-placeholder {
+        color: black; }
+      .contactSect form input::placeholder {
+        color: black; }
+      .contactSect form input:focus {
+        outline: none; }
+    .contactSect form .subjectField {
+      width: 42%; }
+      .contactSect form .subjectField::-webkit-input-placeholder {
+        color: black; }
+      .contactSect form .subjectField::-moz-placeholder {
+        color: black; }
+      .contactSect form .subjectField:-ms-input-placeholder {
+        color: black; }
+      .contactSect form .subjectField::-ms-input-placeholder {
+        color: black; }
+      .contactSect form .subjectField::placeholder {
+        color: black; }
+    .contactSect form textarea {
+      width: 42%;
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      border: none;
+      resize: none;
+      padding-left: 7px; }
+      .contactSect form textarea::-webkit-input-placeholder {
+        color: black; }
+      .contactSect form textarea::-moz-placeholder {
+        color: black; }
+      .contactSect form textarea:-ms-input-placeholder {
+        color: black; }
+      .contactSect form textarea::-ms-input-placeholder {
+        color: black; }
+      .contactSect form textarea::placeholder {
+        color: black; }
+      .contactSect form textarea:focus {
+        outline: none; }
+    .contactSect form button {
+      font-family: "Brandon Grot W01 Light", sans-serif;
+      background-color: #000;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      width: 42%;
+      height: 45px;
+      margin: 0 0 15px; }
+      .contactSect form button:focus {
+        outline: none; }
+  .contactSect .mapDiv {
+    height: 695px;
+    width: 100%;
+    margin: 0; }
+    .contactSect .mapDiv iframe {
+      height: 695px;
+      width: 100%;
+      border: none; }
+
+footer {
+  background-color: black;
+  color: #F5F5F5;
+  font-size: 14px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  footer span {
+    padding-top: 9px; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .backToTopBtn {
+    display: block;
+    visibility: hidden; }
+
+  nav {
+    height: 91px;
+    position: absolute; }
+    nav ul {
+      margin: 0;
+      padding: 0; }
+      nav ul li {
+        margin: 0; }
+        nav ul li .link {
+          display: none; }
+      nav ul .link-border {
+        position: absolute;
+        left: 20px;
+        margin-top: -30px;
+        padding: 15px 40px; }
+        nav ul .link-border .differentLink {
+          margin: 5px; }
+      nav ul .burgerHolder {
+        display: block;
+        position: absolute;
+        right: 20px;
+        margin-top: -30px;
+        width: 18%;
+        text-align: center; }
+        nav ul .burgerHolder .burgerCont {
+          height: 54px; }
+          nav ul .burgerHolder .burgerCont p {
+            margin-top: 6px;
+            font-size: 30px; }
+
+  .fullScreenNavCont {
+    background-color: #242323;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 1s; }
+    .fullScreenNavCont .closeBtnCubeCont {
+      float: right;
+      margin: 20px 25px 0 0; }
+      .fullScreenNavCont .closeBtnCubeCont .closeBtnCube {
+        border: solid 1px white;
+        width: 57.5px;
+        height: 55.6px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .fullScreenNavCont .closeBtnCubeCont .closeBtnCube p {
+          color: white;
+          font-size: 25px; }
+    .fullScreenNavCont .fullScreenNavItems {
+      width: 100%;
+      margin-top: 100px; }
+      .fullScreenNavCont .fullScreenNavItems li {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .fullScreenNavCont .fullScreenNavItems li .active {
+          opacity: 0.5; }
+        .fullScreenNavCont .fullScreenNavItems li a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 15px; }
+          .fullScreenNavCont .fullScreenNavItems li a :focus {
+            color: #B0B0B0; }
+
+  .fixedSocCont {
+    display: none; }
+
+  .fixedChatCont {
+    width: 50px;
+    height: 50px;
+    left: 80%; }
+    .fixedChatCont img {
+      margin: 10px auto; }
+
+  .fixedChatBigCont {
+    width: 100%;
+    height: 0;
+    left: 0;
+    z-index: 5; }
+    .fixedChatBigCont .closeBtnRoundCont {
+      top: 5px;
+      right: 10px; }
+      .fixedChatBigCont .closeBtnRoundCont p {
+        margin-top: 4px; }
+    .fixedChatBigCont .letsChatTxtCont {
+      height: 30%; }
+      .fixedChatBigCont .letsChatTxtCont h1 {
+        font-size: 20px; }
+    .fixedChatBigCont .chatSpaceCont {
+      height: 60%; }
+    .fixedChatBigCont .typeSpaceCont {
+      height: 10%; }
+
+  .roomsBookingSec {
+    margin: 110px auto 20px auto;
+    width: 90%;
+    height: auto; }
+    .roomsBookingSec .selectDatesBtn {
+      display: block;
+      background-color: #191919;
+      border: none;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 15px;
+      width: 98%;
+      height: 45px;
+      margin: 5px auto;
+      font-family: "Brandon Grot W01 Light", sans-serif; }
+      .roomsBookingSec .selectDatesBtn a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px; }
+    .roomsBookingSec .ourRoomsTxt {
+      display: none; }
+    .roomsBookingSec hr {
+      display: none; }
+    .roomsBookingSec .homeBookingForm {
+      display: none; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi {
+      cursor: pointer;
+      height: 170px;
+      width: 100%;
+      margin: 0;
+      width: 100%;
+      display: block; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg {
+        width: 100%;
+        height: 100%;
+        background-size: cover; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg .moreInfoBtnSlide {
+          display: none; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText {
+        width: auto;
+        height: auto;
+        margin: 0 0 0 10px;
+        padding: 0;
+        top: -45px;
+        position: relative;
+        z-index: 1; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText a {
+          text-decoration: none;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 100; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText p {
+          display: none; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .features {
+          display: none; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont {
+          display: none; }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice {
+        height: 50px;
+        width: 80px;
+        display: inline-block;
+        padding: 0;
+        top: -90px;
+        float: right;
+        position: relative;
+        z-index: 1; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice p {
+          font-size: 15px;
+          color: #fff;
+          text-align: right;
+          padding-right: 20px; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice h2 {
+          font-size: 20px;
+          color: #fff;
+          text-align: left; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice button {
+          display: none; }
+        .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice img {
+          display: inline-block;
+          position: relative;
+          height: 25px;
+          width: 25px;
+          top: -38px;
+          left: 45px;
+          transform: rotate(90deg); }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .firstInfoImg {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 75%, black), url("src/bookingPageSrc/bedroom-3102376_1920.jpg"); }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .secondInfoImg {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 75%, black), url("src/bookingPageSrc/hotel-3102375_1920.jpg"); }
+      .roomsBookingSec .roomsInfoCont .roomsInfoContLi .thirdInfoImg {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 75%, black), url("src/bookingPageSrc/hotel-room-1447201_1920.jpg"); }
+
+  .contactSect {
+    padding-top: 50px; }
+    .contactSect .contactUsTxt {
+      font-size: 20px;
+      padding-left: 100px; }
+    .contactSect .contactTxt {
+      width: 100%;
+      flex-direction: column;
+      margin: 5px 0; }
+      .contactSect .contactTxt p {
+        font-size: 16px;
+        width: 65%;
+        text-align: center;
+        margin: 15px 5px; }
+      .contactSect .contactTxt .hideSlash {
+        display: none; }
+      .contactSect .contactTxt .SocContBottom {
+        display: inline;
+        background-color: transparent;
+        width: 60%;
+        height: auto;
+        margin-bottom: 10px; }
+        .contactSect .contactTxt .SocContBottom .SocContBottomItemCont {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont img {
+            margin: 3px 20px; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont .tripadvisor {
+            width: 25px;
+            height: 25px; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont .facebook {
+            width: 20px;
+            height: 20px; }
+          .contactSect .contactTxt .SocContBottom .SocContBottomItemCont .instagram {
+            width: 20px;
+            height: 20px; }
+    .contactSect .contactSectForm ul li input {
+      width: 100%;
+      height: 44px;
+      border-radius: 2px;
+      font-size: 15px;
+      padding-left: 7px;
+      margin-top: 10px; }
+    .contactSect .contactSectForm ul li .subjectField {
+      margin-top: 0px; }
+    .contactSect .contactSectForm ul li .messageField {
+      width: 100%;
+      padding-top: 10px;
+      font-size: 15px;
+      border-radius: 2px; }
+    .contactSect .contactSectForm ul li button {
+      width: 100%;
+      margin-bottom: 0; }
+    .contactSect .mapDiv {
+      width: 100%;
+      height: 300px;
+      margin: 0; }
+      .contactSect .mapDiv iframe {
+        width: 100%;
+        height: 100%;
+        border: none; }
+
+  footer {
+    font-size: 15px;
+    height: 100px;
+    align-items: flex-start; }
+    footer span {
+      width: 90%;
+      text-align: center;
+      margin-top: 7px; } }
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .fullScreenNavCont .closeBtnCubeCont {
+    margin: 20px 19px 0 0; }
+    .fullScreenNavCont .closeBtnCubeCont .closeBtnCube {
+      width: 73px; }
+  .fullScreenNavCont .fullScreenNavItems li {
+    margin: 20px; }
+    .fullScreenNavCont .fullScreenNavItems li a {
+      font-size: 20px; }
+
+  nav {
+    height: 91px;
+    position: absolute; }
+    nav ul {
+      margin: 0;
+      padding: 0; }
+      nav ul li {
+        margin: 0; }
+        nav ul li .link {
+          display: none; }
+      nav ul .link-border {
+        position: absolute;
+        left: 20px;
+        margin-top: -30px;
+        padding: 15px 50px; }
+        nav ul .link-border .differentLink {
+          margin: 5px; }
+      nav ul .burgerHolder {
+        display: block;
+        position: absolute;
+        right: 20px;
+        margin-top: -30px;
+        width: 10%;
+        text-align: center; }
+        nav ul .burgerHolder .burgerCont {
+          height: 54px; }
+          nav ul .burgerHolder .burgerCont p {
+            margin-top: 6px;
+            font-size: 30px; }
+
+  .roomsBookingSec .homeBookingForm button {
+    width: 25%; }
+  .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg {
+    width: 35%; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoImg .moreInfoBtnSlide {
+      display: none; }
+  .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText {
+    width: 45%;
+    margin: 0px 5px;
+    padding: 0px 5px; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .amenity {
+      width: 15px;
+      height: 15px;
+      margin: 2px 8px; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .showerIcon {
+      width: 20px;
+      height: 20px; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoText .amenityCont .tooltipCnt .bathIcon {
+      width: 20px;
+      height: 20px; }
+  .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice {
+    width: 18%; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice h2 {
+      font-size: 30px; }
+    .roomsBookingSec .roomsInfoCont .roomsInfoContLi .roomsInfoPrice button {
+      font-size: 12px; }
+
+  .contactSect h4 {
+    margin-bottom: 30px; }
+  .contactSect .contactTxt {
+    flex-wrap: wrap;
+    margin-bottom: 30px; }
+    .contactSect .contactTxt p {
+      margin: 10px 10px 10px; }
+    .contactSect .contactTxt .hideSlash {
+      display: none; }
+  .contactSect .contactSectForm ul li input {
+    width: 30%; }
+  .contactSect .contactSectForm ul li .subjectField {
+    width: 60.5%; }
+  .contactSect .contactSectForm ul li textarea {
+    width: 60.5%; }
+  .contactSect .contactSectForm ul li button {
+    width: 60.5%; } }
+
+/*# sourceMappingURL=bookingPage.css.map */

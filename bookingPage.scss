@@ -1,0 +1,1302 @@
+@font-face {font-family: "Brandon Grot W01 Light";
+  src: url("funconts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.eot");
+  src: url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.woff") format("woff"), /* chrome、firefox */
+  url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/Brandon_Grot _W01_Light/6dd2f2510b4a00a5461b2455928209c2.svg#Brandon Grot W01 Light") format("svg"); /* iOS 4.1- */
+}
+@font-face {font-family: "Didot eText W01 Italic";
+  src: url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.eot"); /* IE9*/
+  src: url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.woff2") format("woff2"), /* chrome、firefox */
+  url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.woff") format("woff"), /* chrome、firefox */
+  url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url("fonts/Didot_eText_W01_Italic/16efa2896f117dae2debeb23ab4715dd.svg#Didot eText W01 Italic") format("svg"); /* iOS 4.1- */
+}
+
+$mainFont: 'Brandon Grot W01 Light', sans-serif;
+
+//For Chrome, Mozilla, and Opera Browsers
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+[type="number"]::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  width: 20px;
+  height: 30px;
+}
+
+//For Internet Explorer, Edge
+[type="date"]:-ms-inner-spin-button {
+  display: none;
+
+}
+[type="date"]:-ms-calendar-picker-indicator {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html{
+  width: 100%;
+  height: auto;
+}
+
+body {
+    font-family: $mainFont;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+nav {
+  // height: auto;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  background-color: #242323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 5;
+  ul {
+  list-style-type: none;
+  margin: 30px;
+  padding: 10px;
+  }
+  li{
+    display: inline;
+    // padding: 10px;
+    padding: 10px 0px 10px 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    .link{
+      text-decoration:none;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 10px;
+      margin: 5px;
+      // psiaudo selektorius
+        &:hover{
+          color: #B0B0B0;
+        }
+        //kodel neveikia sitas dar?
+        :focus{
+          color: #B0B0B0;
+        }
+    }
+    .active{
+      color: #B0B0B0;
+    }
+    .differentLink{
+      text-decoration: none;
+      color: #fff;
+      font-size: 14px;
+      padding: 10px 20px;
+      // margin: 5px;
+      &:hover{
+        color:black;
+      }
+    }
+  }
+  .link-border{
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    background-color: transparent;
+    &:hover{
+      background-color: white;
+      color: black;
+    }
+  }
+  .burgerHolder{
+    display: none;
+    margin: 0;
+    padding: 0;
+    .burgerCont{
+      border: solid 1px white;
+      p{
+        color: white;
+        font-size: 40px;
+        padding: 0;
+        margin: 0;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+//hidden full menu
+.fullScreenNavCont{
+  background-color: #242323;
+  width: 100%;
+  height: 0;
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  transition: 1s;
+  .closeBtnCubeCont{
+    float: right;
+    margin: 20px 25px 0 0;
+    .closeBtnCube{
+      border: solid 1px white;
+      width: 57.5px;
+      height: 55.6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+        color: white;
+        font-size: 25px;
+      }
+    }
+  }
+  .fullScreenNavItems{
+    width: 100%;
+    margin-top: 100px;
+    li{
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .active{
+        opacity: 0.5;
+      }
+      a{
+        text-decoration:none;
+        color: #fff;
+        font-size: 15px;
+        :focus{
+          color: #B0B0B0;
+        }
+      }
+    }
+  }
+}
+
+.fixedSocCont{
+  background-color: white;
+  // width: 87px;
+  height: 222px;
+  position: fixed;
+  right: 0;
+  top: 250px;
+  border-radius: 2px;
+  opacity: 0.9;
+  z-index: 3;
+  .fixedSocContItemCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    margin-top: 10px;
+    img{
+      margin: 20px;
+    }
+    .tripadvisor{
+      width: 28px;
+      height: 28px;
+    }
+    .facebook{
+      width: 22px;
+      height: 22px;
+    }
+    .instagram{
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.backToTopBtn{
+  display: none;
+  position: fixed;
+  border-radius: 50%;
+  background-color: #191919;
+  width: 45px;
+  height: 45px;
+  left: 80.5%;
+  bottom: 80px;
+  cursor: pointer;
+  z-index: 4;
+  &:hover{
+    box-shadow: 0px 0px 20px -6px rgba(0,0,0,0.75)
+  }
+  img{
+    display: block;
+    margin-left: -1px;
+  }
+}
+
+.fixedChatCont{
+  position: fixed;
+  border-radius: 50%;
+  background-color: #191919;
+  width: 60px;
+  height: 60px;
+  left: 50px;
+  bottom: 15px;
+  cursor: pointer;
+  visibility: visible;
+  z-index: 4;
+
+  &:hover{
+    box-shadow: 0px 0px 20px -6px rgba(0,0,0,0.75)
+  }
+
+
+  img{
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin: 14px auto;
+  }
+}
+
+.closeBtnRoundCont{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  .closeBtnRound{
+    border-radius: 50%;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    color: white;
+    &:hover{
+      background-color: #E0E0E0;
+      opacity: 0.2;
+    }
+  }
+  p{
+    text-align: center;
+    margin-top: 3px;
+    color: white;
+  }
+}
+
+.fixedChatBigCont{
+  left: 20px;
+  bottom: 0;
+  position: fixed;
+  width: 336px;
+  // height: 507px;
+  height: 0;
+  z-index: 5;
+  transition: 0.5s;
+  .letsChatTxtCont{
+    width: 100%;
+    height: 226px;
+    background-color: #242323;
+    color: #fff;
+    text-align: center;
+    font-family: $mainFont;
+    padding-top: 70px;
+    line-height: 35px;
+    h1{
+      font-size: 22px;
+    }
+  }
+  .chatSpaceCont{
+    background-color: #E2E2E2;
+    width: 100%;
+    // height: 222px;
+    height: 225px;
+  }
+
+  .typeSpaceCont{
+    width: 100%;
+    height: 57px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    .item{
+      width: 20px;
+      height: 20px;
+      margin: 10px;
+    }
+    .paperPlane{
+      display: none;
+    }
+    textarea{
+      resize: none;
+      outline: none;
+      border: none;
+      font-family: $mainFont;
+      font-size: 20px;
+      width: 80%;
+    }
+  }
+}
+
+.roomsBookingSec{
+  margin: 200px auto 150px auto;
+  width: 65%;
+  height: auto;
+  .selectDatesBtn{
+    display: none;
+  }
+  h2{
+    color: #242323;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  hr{
+    border: solid 0.5px #D3D3D3;
+    margin: 10px 0 10px 0;
+  }
+
+  .homeBookingForm{
+    width: 100%;
+    height: auto;
+    margin: 20px 0 20px 0;
+    // border: 1px solid red;
+    text-align: center;
+    input{
+      width: 20%;
+      height: 35px;
+      padding-left: 7px;
+      border: solid 1px #bdbdbd;
+      font-family: $mainFont;
+      font-size: 12px;
+      &:focus{
+        outline: none;
+      }
+      &::-webkit-input-placeholder{
+        font-size: 12px;
+        color: #000;
+        // font-family: $mainFont;
+        // padding-left: 5px;
+      }
+      &::-moz-placeholder{
+        font-size: 12px;
+        color: #000;
+        // font-family: $mainFont;
+        // padding-left: 5px;
+      }
+      &:-ms-input-placeholder{
+        font-size: 12px;
+        color: #000;
+        // font-family: $mainFont;
+        // padding-left: 5px;
+      }
+      &::-ms-input-placeholder{
+        font-size: 12px;
+        color: #000;
+        // font-family: $mainFont;
+        // padding-left: 5px;
+      }
+      &::placeholder{
+        font-size: 12px;
+        color: #000;
+        // font-family: $mainFont;
+        // padding-left: 5px;
+      }
+    }
+    button{
+      background-color: #000;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      font-size: 15px;
+      width: 18%;
+      height: 35px;
+      margin-top: 10px;
+      font-family: $mainFont;
+    }
+  }
+
+
+  .roomsInfoCont{
+    width: 100%;
+    height: auto;
+    .roomsInfoContLi{
+      list-style-type: none;
+      width: 100%;
+      height: auto;
+      display: flex;
+      margin: 37px 0;
+
+      .roomsInfoImg{
+        flex: none;
+        width: 25%;
+        height: auto;
+        position: relative;
+        cursor: pointer;
+        .moreInfoBtnSlide{
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 35%;
+          height: 5px;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: .4s ease;
+          p{
+            display: none;
+            font-size: 12px;
+            margin: 8px 8px;
+            text-align: center;
+          }
+        }
+        &:hover{
+          .moreInfoBtnSlide{
+            height: 20%;
+            p{
+              display: block;
+            }
+          }
+        }
+      }
+
+      .roomsInfoText{
+        flex: none;
+        width: 50%;
+        height: auto;
+        margin: 0px 15px;
+        padding: 0px 10px;
+        position: relative;
+        a{
+          text-decoration: none;
+          color: #242323;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        p{
+          font-size: 12px;
+          width: 100%;
+          margin: 10px 0 10px 0;
+        }
+        .features{
+          height: auto;
+          margin: 20px 0;
+          .featuresLi{
+            height: auto;
+            font-size: 12px;
+            list-style: none;
+            &::before{
+              content: '';
+              display: inline-block;
+              margin-right: 10px;
+              height: 4px;
+              width: 4px;
+              background-color: black;
+              border: solid 1px black;
+              border-radius: 3px;
+            }
+          }
+        }
+        hr{
+          border: solid 0.5px #D3D3D3;
+          margin: 4px;
+        }
+        .amenityCont{
+          display: flex;
+          margin-top: 2px;
+          height: auto;
+          flex-wrap: wrap;
+          .tooltipCnt{
+            position: relative;
+
+            &:hover{
+              .tooltiptext{
+                visibility: visible;
+              }
+            }
+            .amenity{
+              width: 27px;
+              height: 27px;
+              margin: 2px 8px;
+            }
+            //custom icons
+            .showerIcon{
+              width: 32px;
+              height: 32px;
+            }
+            .bathIcon{
+              width: 33px;
+              height: 33px;
+            }
+
+            //toolTipoCont
+            .tooltiptext{
+              visibility: hidden;
+              background-color: white;
+              color: #000;
+              border: solid 1px #E0E0E0;
+              text-align: center;
+              font-size: 13px;
+              border-radius: 3px;
+              height: 30px;
+              width: 73px;
+              padding: 5px 5px;
+              position: absolute;
+              top: -34px;
+              left: -15px;
+
+              &::after{
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #E0E0E0 transparent transparent transparent;
+              }
+
+              &::before{
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -4px;
+                border-width: 4px;
+                border-style: solid;
+                border-color: white transparent transparent transparent;
+                z-index: 2;
+              }
+
+            }
+          }
+        }
+      }
+
+      .roomsInfoPrice{
+        // height: 170px;
+        flex: none;
+        width: 20%;
+        height: auto;
+        display: flex;
+        // justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 40px;
+        p{
+          font-size: 12px;
+        }
+        h2{
+          font-size: 35px;
+          color: #000;
+        }
+        button{
+          background-color: #000;
+          border: none;
+          color: white;
+          text-align: center;
+          cursor: pointer;
+          font-size: 16px;
+          // width: 140px;
+          width: 80%;
+          height: 35px;
+          margin-top: 10px;
+          font-family: $mainFont;
+        }
+        img{
+          display: none;
+        }
+      }
+
+      //custom
+      .firstInfoImg{
+        background-image: url("src/bookingPageSrc/bedroom-3102376_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+      .secondInfoImg{
+        background-image: url("src/bookingPageSrc/hotel-3102375_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+      .thirdInfoImg{
+        background-image: url("src/bookingPageSrc/hotel-room-1447201_1920.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        }
+      }
+    }
+}
+
+.contactSect{
+  width: 100%;
+  height: auto;
+  background-color: #F0F0F0;
+  padding-top: 110px;
+  h4{
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .contactTxt{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      font-size: 18px;
+      font-style: italic;
+      color: #737373;
+      margin: 50px 10px 50px;
+    }
+    .SocContBottom{
+      display: none;
+    }
+  }
+  form{
+    margin-bottom: 90px;
+    ul{
+      text-align: center;
+      list-style:none
+    }
+    li{
+      margin: 12px;
+    }
+    input{
+      // width:315px;
+      width: 21%;
+      height: 30px;
+      border: none;
+      font-family: $mainFont;
+      padding-left: 7px;
+      &::-webkit-input-placeholder{
+        color: black;
+        // padding-left: 5px;
+      }
+      &::-moz-placeholder{
+        color: black;
+        // padding-left: 5px;
+      }
+      &:-ms-input-placeholder{
+        color: black;
+        // padding-left: 5px;
+      }
+      &::-ms-input-placeholder{
+        color: black;
+        // padding-left: 5px;
+      }
+      &::placeholder{
+        color: black;
+        // padding-left: 5px;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    .subjectField{
+      // width: 632px;
+      width: 42%;
+      &::-webkit-input-placeholder{
+        color: black;
+      }
+      &::-moz-placeholder{
+        color: black;
+      }
+      &:-ms-input-placeholder{
+        color: black;
+      }
+      &::-ms-input-placeholder{
+        color: black;
+      }
+      &::placeholder{
+        color: black;
+      }
+    }
+    textarea{
+      // width: 632px;
+      width: 42%;
+      font-family: $mainFont;
+      border: none;
+      resize: none;
+      padding-left: 7px;
+      &::-webkit-input-placeholder{
+        color: black;
+      }
+      &::-moz-placeholder{
+        color: black;
+      }
+      &:-ms-input-placeholder{
+        color: black;
+      }
+      &::-ms-input-placeholder{
+        color: black;
+      }
+      &::placeholder{
+        color: black;
+      }
+      &:focus{
+        outline: none;
+      }
+    }
+    button{
+      font-family: $mainFont;
+      background-color: #000;
+      border: none;
+      color: white;
+      text-align: center;
+      cursor: pointer;
+      font-size: 18px;
+      // width: 632px;
+      width: 42%;
+      height: 45px;
+      margin: 0 0 15px;
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+
+  .mapDiv{
+    height: 695px;
+    width: 100%;
+    margin:0;
+    iframe{
+      height: 695px;
+      width: 100%;
+      border: none;
+    }
+  }
+}
+
+footer{
+  background-color: black;
+  color: #F5F5F5;
+  font-size: 14px;
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    padding-top: 9px;
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+.backToTopBtn{
+  display: block;
+  visibility: hidden;
+}
+
+  nav{
+        height: 91px;
+        position: absolute;
+        ul{
+          margin:0;
+          padding: 0;
+          li{
+            margin: 0;
+            .link{
+              display: none;
+            }
+          }
+          .link-border{
+            position: absolute;
+            left: 20px;
+            // margin-top: -15px;
+            margin-top: -30px;
+            padding: 15px 40px;
+            .differentLink{
+              margin: 5px;
+            }
+          }
+          .burgerHolder{
+            display: block;
+            position: absolute;
+            right: 20px;
+            // margin-top: -38.5px;
+            margin-top: -30px;
+            width: 18%;
+            text-align: center;
+            .burgerCont{
+              height: 54px;
+              p{
+                margin-top: 6px;
+                font-size: 30px;
+              }
+            }
+          }
+
+        }
+      }
+
+//SUTVARKYTI TA KNOPKE ne tik mobile bet ir plance ir main page.
+  .fullScreenNavCont{
+    background-color: #242323;
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: 1s;
+    .closeBtnCubeCont{
+      float: right;
+      margin: 20px 25px 0 0;
+      .closeBtnCube{
+        border: solid 1px white;
+        width: 57.5px;
+        height: 55.6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+          color: white;
+          font-size: 25px;
+        }
+      }
+    }
+    .fullScreenNavItems{
+      width: 100%;
+      margin-top: 100px;
+      li{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .active{
+          opacity: 0.5;
+        }
+        a{
+          text-decoration:none;
+          color: #fff;
+          font-size: 15px;
+          :focus{
+            color: #B0B0B0;
+          }
+        }
+      }
+    }
+  }
+
+  .fixedSocCont{
+    display: none;
+  }
+
+  .fixedChatCont{
+    // display: none;
+    width: 50px;
+    height: 50px;
+    left: 80%;
+    img{
+      margin: 10px auto;
+    }
+  }
+
+  .fixedChatBigCont{
+    width: 100%;
+    height: 0;
+    left: 0;
+    z-index: 5;
+    .closeBtnRoundCont{
+      top: 5px;
+      right: 10px;
+      p{
+        margin-top: 4px;
+      }
+    }
+    .letsChatTxtCont{
+      height: 30%;
+      h1{
+        font-size: 20px;
+      }
+    }
+    .chatSpaceCont{
+      height: 60%;
+    }
+   .typeSpaceCont{
+      height: 10%;
+    }
+  }
+
+  .roomsBookingSec{
+    margin: 110px auto 20px auto;
+    width: 90%;
+    height: auto;
+    .selectDatesBtn{
+      display: block;
+      background-color: #191919;
+      border: none;
+      border-radius: 3px;
+      text-align: center;
+      font-size: 15px;
+      width: 98%;
+      height: 45px;
+      margin: 5px auto;
+      font-family: $mainFont;
+      // cursor: pointer;
+      a{
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+    }
+    .ourRoomsTxt{
+      display: none;
+    }
+    hr{
+      display: none;
+    }
+    .homeBookingForm{
+      display: none;
+    }
+    .roomsInfoCont{
+      .roomsInfoContLi{
+        cursor: pointer;
+        height: 170px;
+        width: 100%;
+        margin:0;
+        width: 100%;
+        display: block;
+        .roomsInfoImg{
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          .moreInfoBtnSlide{
+            display: none;
+          }
+        }
+        .roomsInfoText{
+          width: auto;
+          height: auto;
+          margin: 0 0 0 10px;
+          padding: 0;
+          top: -45px;
+          position: relative;
+          z-index: 1;
+          a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 100;
+          }
+          p{
+            display: none;
+          }
+          .features{
+            display: none;
+          }
+          .amenityCont{
+            display: none;
+          }
+        }
+        .roomsInfoPrice{
+          height: 50px;
+          width: 80px;
+          display: inline-block;
+          padding:0;
+          top: -90px;
+          float: right;
+          position: relative;
+          z-index: 1;
+          p{
+            font-size: 15px;
+            color: #fff;
+            text-align: right;
+            padding-right: 20px;
+          }
+          h2{
+            font-size: 20px;
+            color: #fff;
+            text-align: left;
+          }
+          button{
+            display: none;
+          }
+          img{
+            display: inline-block;
+            position: relative;
+            height: 25px;
+            width: 25px;
+            top: -38px;
+            left: 45px;
+            transform: rotate(90deg);
+          }
+        }
+        //custom
+        .firstInfoImg{
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 1) ),url('src/bookingPageSrc/bedroom-3102376_1920.jpg');
+        }
+        .secondInfoImg{
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 1) ),url('src/bookingPageSrc/hotel-3102375_1920.jpg');
+        }
+        .thirdInfoImg{
+          background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 75%, rgba(0, 0, 0, 1) ),url('src/bookingPageSrc/hotel-room-1447201_1920.jpg');
+        }
+      }
+    }
+  }
+
+  .contactSect{
+    padding-top: 50px;
+    .contactUsTxt{
+      font-size: 20px;
+      padding-left: 100px;
+    }
+    .contactTxt{
+      width: 100%;
+      flex-direction: column;
+      margin: 5px 0;
+      p{
+        font-size: 16px;
+        width:  65%;
+        text-align: center;
+        margin: 15px 5px;
+      }
+      .hideSlash{
+        display: none;
+      }
+      .SocContBottom{
+        display: inline;
+        background-color: transparent;
+        width: 60%;
+        height: auto;
+        margin-bottom: 10px;
+        .SocContBottomItemCont{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            margin: 3px 20px;
+          }
+          .tripadvisor{
+            width: 25px;
+            height: 25px;
+          }
+          .facebook{
+            width: 20px;
+            height: 20px;
+          }
+          .instagram{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    .contactSectForm{
+      ul{
+        li{
+          input{
+            width: 100%;
+            height: 44px;
+            border-radius: 2px;
+            font-size: 15px;
+            padding-left: 7px;
+            margin-top: 10px;
+          }
+          .subjectField{
+            margin-top: 0px;
+          }
+          .messageField{
+            width: 100%;
+            padding-top: 10px;
+            font-size: 15px;
+            border-radius: 2px;
+          }
+          button{
+            width: 100%;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .mapDiv{
+      width: 100%;
+      height: 300px;
+      margin:0;
+      iframe{
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    }
+  }
+
+  footer{
+    font-size: 15px;
+    height: 100px;
+    align-items: flex-start;
+    span{
+      width: 90%;
+      text-align: center;
+      margin-top: 7px;
+    }
+  }
+
+}
+
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+
+  .fullScreenNavCont{
+    .closeBtnCubeCont{
+      margin: 20px 19px 0 0;
+      .closeBtnCube{
+        width: 73px;
+      }
+    }
+    .fullScreenNavItems{
+      li{
+        margin: 20px;
+        a{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  nav{
+    height: 91px;
+    position: absolute;
+    ul{
+      margin:0;
+      padding: 0;
+      li{
+        margin: 0;
+        .link{
+          display: none;
+        }
+      }
+      .link-border{
+        position: absolute;
+        left: 20px;
+        // margin-top: -15px;
+        margin-top: -30px;
+        padding: 15px 50px;
+        .differentLink{
+          margin: 5px;
+        }
+      }
+      .burgerHolder{
+        display: block;
+        position: absolute;
+        right: 20px;
+        // margin-top: -38.5px;
+        margin-top: -30px;
+        width: 10%;
+        text-align: center;
+        .burgerCont{
+          height: 54px;
+          p{
+            margin-top: 6px;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  .roomsBookingSec{
+    .homeBookingForm{
+      button{
+        width: 25%
+      }
+    }
+    .roomsInfoCont{
+      .roomsInfoContLi{
+        .roomsInfoImg{
+          width: 35%;
+          .moreInfoBtnSlide{
+            display: none;
+          }
+        }
+
+        .roomsInfoText{
+          width: 45%;
+          margin: 0px 5px;
+          padding: 0px 5px;
+          .amenityCont{
+            .tooltipCnt{
+              .amenity{
+                width: 15px;
+                height: 15px;
+                margin: 2px 8px;
+              }
+              //custom icons
+              .showerIcon{
+                width: 20px;
+                height: 20px;
+              }
+              .bathIcon{
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+        .roomsInfoPrice{
+          width: 18%;
+          h2{
+            font-size: 30px;
+          }
+          button{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .contactSect{
+    h4{
+      margin-bottom: 30px;
+    }
+    .contactTxt{
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      p{
+        margin: 10px 10px 10px;
+      }
+      .hideSlash{
+        display: none;
+      }
+    }
+    .contactSectForm{
+      ul{
+        li{
+          input{
+            width: 30%;
+          }
+          .subjectField{
+            width: 60.5%;
+          }
+          textarea{
+            width: 60.5%;
+          }
+          button{
+            width: 60.5%;
+          }
+        }
+      }
+    }
+  }
+
+}

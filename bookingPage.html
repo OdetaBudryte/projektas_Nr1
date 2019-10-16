@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B&B Book A Room</title>
+    <link rel="stylesheet" type="text/css" href="bookingPage.css">
+  </head>
+  <body>
+
+    <div class="fullScreenNavCont" id='fullScreenNavContId'>
+      <div class="closeBtnCubeCont" id='closeBtnCube'>
+        <div class="closeBtnCube">
+          <p id='closeBtnCube'>&#10005;</p>
+        </div>
+      </div>
+      <ul class="fullScreenNavItems">
+        <li><a href="index.html#homeSect" class='fullNavLink'>HOME</a></li>
+        <li><a href="index.html#aboutSect" class='fullNavLink'>ABOUT</a></li>
+        <li><a href="index.html#roomSect" class='fullNavLink'>ROOMS</a></li>
+        <li><a href="index.html#servicesSect" class='fullNavLink'>SERVICES</a></li>
+        <li><a href="index.html#gallerySect" class='fullNavLink'>GALLERY</a></li>
+        <li><a href="index.html#seeNdooSect" class='fullNavLink'>SEE & DO</a></li>
+        <li><a href="index.html#contactSect" class='fullNavLink'>CONTACT</a></li>
+      </ul>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html#homeSect" class='link'>HOME</a></li>
+        <li><a href="index.html#aboutSect" class='link'>ABOUT</a></li>
+        <li><a href="index.html#roomSect" class='link'>ROOMS</a></li>
+        <li><a href="index.html#servicesSect" class='link'>SERVICES</a></li>
+        <li><a href="index.html#gallerySect" class='link'>GALLERY</a></li>
+        <li><a href="index.html#seeNdooSect" class='link'>SEE & DO</a></li>
+        <li><a href="index.html#contactSect" class='link'>CONTACT</a></li>
+        <li class='link-border'><a href="bookingPage.html" class='differentLink'>Book A Room</a></li>
+
+        <li class='burgerHolder' id='burgerHolderId'><div class="burgerCont"><p id='burger'>&#x2630;</p></div></li>
+      </ul>
+    </nav>
+
+    <div class="fixedSocCont">
+      <div class="fixedSocContItemCont">
+        <a href="https://www.tripadvisor.com/" target="_blank"><img src="src/tripadvisor.svg" alt="tripadvisor" class='tripadvisor'></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="src/facebook-letter-logo.svg" alt="facebook" class='facebook'></a>
+        <a href="https://www.instagram.com" target="_blank"><img src="src/instagram.svg" alt="instagram" class='instagram'></a>
+      </div>
+    </div>
+
+    <div class="backToTopBtn" id='backToTopBtn'><img src="src/bookingPageSrc/icons8-collapse-arrow-48.png" alt=""></div>
+
+    <div class="fixedChatCont" id='bubbleChat'>
+      <img src="src/iconfinder-icon.svg" alt="chat bubble">
+    </div>
+
+    <div class="fixedChatBigCont" id='fullChatCont'>
+      <div class="closeBtnRoundCont" id='closeBtn'>
+        <div class="closeBtnRound"></div>
+        <p id='closeBtn'>&#10005;</p>
+      </div>
+      <div class="letsChatTxtCont">
+        <h1>Lets Chat!</h1>
+        <span>Ask us any question.</span>
+      </div>
+      <div class="chatSpaceCont"></div>
+      <div class="typeSpaceCont">
+        <img src="src/iconfinder_Streamline-65_185085.svg" alt="emote" class='item'>
+        <textarea name="chatTxt" rows="1" cols="28" placeholder="Type your message..." id='chatTextArea'></textarea>
+        <img src="src/iconfinder_clip-fasten-file-attach-join_3209373.svg" alt="Attach File" class='item' id='attachFiles'>
+        <img src="src/iconfinder_paper-plane-craft-send-go-start_3643751.svg" alt="Send Paperplane" class='item paperPlane' id='sendPaperPlane'>
+      </div>
+    </div>
+
+    <section class='roomsBookingSec'>
+
+      <button type="button" name="Select Dates" class='selectDatesBtn'><a href="#">Select Dates</a></button>
+
+      <h2 class='ourRoomsTxt'>Our Rooms</h2>
+
+      <hr noshade>
+
+      <form class="homeBookingForm">
+        <input class='inputFieldDate' type="text" name="checkIn" placeholder="Check In" onfocus="(this.type='date')" onblur="(this.type='text')" >
+        <input class='inputFieldDate' type="text" name="checkOut" placeholder="Check Out" onfocus="(this.type='date')" onblur="(this.type='text')">
+        <input class='inputFieldNumber' type="number" min="0" name="adults" placeholder="Adults">
+        <input class='inputFieldNumber' type="number" min="0" name="kids" placeholder="Kids">
+        <button type="button" name="search" class='searchBookingButton'>Search</button>
+      </form>
+
+      <hr noshade>
+
+      <ul class="roomsInfoCont">
+        <li class= 'roomsInfoContLi'>
+          <div class='roomsInfoImg firstInfoImg'>
+            <div class="moreInfoBtnSlide"><p>More Info</p></div>
+          </div>
+          <div class='roomsInfoText firstInfoTxt'>
+            <a href="#"> Junior Suite </a>
+            <p>Our Junior Suites offer breathtaking views of the city skyline.</p>
+            <ul class='features'>
+              <li class='featuresLi'>Size: 260 sq ft</li>
+              <li class='featuresLi'>Beds: 2 Double(s)</li>
+            </ul>
+            <hr noshade>
+            <div class="amenityCont">
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_christmas_line-09_2636392.svg" alt="snowflace icon" class='amenity snowflaceIcon'><span class="tooltiptext">A/C</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_wi-fi_430077.svg" alt="wifi icon" class='amenity wifiIcon'><span class="tooltiptext">WiFi</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/television.svg" alt="tv icon" class='amenity tvIcon'><span class="tooltiptext">Tv</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/safety-box.svg" alt="safe icon" class='amenity safeIcon'><span class="tooltiptext">Safe</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/minibar.svg" alt="minibar icon" class='amenity minibarIcon'><span class="tooltiptext">Minibar</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_phone1_172517.svg" alt="telephone icon" class='amenity telephoneIcon'><span class="tooltiptext">Telephone</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/crossed-knife-and-fork.svg" alt="kitchen icon" class='amenity kitchenIcon'><span class="tooltiptext">Kitchen</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/towel.svg" alt="towels icon" class='amenity towelsIcon'><span class="tooltiptext">Towels</span></div>
+            </div>
+          </div>
+          <div class='roomsInfoPrice firstInfoPrice'>
+            <p>From</p>
+            <h2>$250</h2>
+            <button type="button" name="more Info" class> More Info</button>
+            <img src="src/bookingPageSrc/icons8-collapse-arrow-48.png" alt="next Arrow">
+          </div>
+        </li>
+
+        <hr noshade>
+
+        <li class= 'roomsInfoContLi'>
+          <div class='roomsInfoImg secondInfoImg'>
+            <div class="moreInfoBtnSlide"><p>More Info</p></div>
+          </div>
+          <div class='roomsInfoText secondInfoTxt'>
+            <a href="#"> Standart Room </a>
+            <p>Our Standard Rooms are the perfect combination of function and comfort.</p>
+            <ul class='features'>
+              <li class='featuresLi'>Size: 230 sq ft</li>
+              <li class='featuresLi'>Beds: 1 Double(s)</li>
+            </ul>
+            <hr noshade>
+            <div class="amenityCont">
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_christmas_line-09_2636392.svg" alt="snowflace icon" class='amenity snowflaceIcon'><span class="tooltiptext">A/C</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_wi-fi_430077.svg" alt="wifi icon" class='amenity wifiIcon'><span class="tooltiptext">WiFi</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/television.svg" alt="tv icon" class='amenity tvIcon'><span class="tooltiptext">Tv</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/safety-box.svg" alt="safe icon" class='amenity safeIcon'><span class="tooltiptext">Safe</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/minibar.svg" alt="minibar icon" class='amenity minibarIcon'><span class="tooltiptext">Minibar</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_phone1_172517.svg" alt="telephone icon" class='amenity telephoneIcon'><span class="tooltiptext">Telephone</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/crossed-knife-and-fork.svg" alt="kitchen icon" class='amenity kitchenIcon'><span class="tooltiptext">Kitchen</span></div>
+            </div>
+          </div>
+          <div class='roomsInfoPrice secondInfoPrice'>
+            <p>From</p>
+            <h2>$150</h2>
+            <button type="button" name="more Info" class> More Info</button>
+            <img src="src/bookingPageSrc/icons8-collapse-arrow-48.png" alt="next Arrow">
+          </div>
+        </li>
+
+        <hr noshade>
+
+        <li class='roomsInfoContLi'>
+          <div class='roomsInfoImg thirdInfoImg'>
+            <div class="moreInfoBtnSlide"><p>More Info</p></div>
+          </div>
+          <div class='roomsInfoText thirdInfoTxt'>
+            <a href="#"> Superior Room </a>
+            <p>Our Superior Rooms are comfortable, roomy and elegant.</p>
+            <ul class='features'>
+              <li class='featuresLi'>Size: 280 sq ft</li>
+              <li class='featuresLi'>Beds: 1 King(s)</li>
+            </ul>
+            <hr noshade>
+            <div class="amenityCont">
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_christmas_line-09_2636392.svg" alt="snowflace icon" class='amenity snowflaceIcon'><span class="tooltiptext">A/C</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_wi-fi_430077.svg" alt="wifi icon" class='amenity wifiIcon'><span class="tooltiptext">WiFi</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/television.svg" alt="tv icon" class='amenity tvIcon'><span class="tooltiptext">Tv</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/safety-box.svg" alt="safe icon" class='amenity safeIcon'><span class="tooltiptext">Safe</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/minibar.svg" alt="minibar icon" class='amenity minibarIcon'><span class="tooltiptext">Minibar</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_shower_head_2023124.svg" alt="shower icon" class='amenity showerIcon'><span class="tooltiptext">Shower</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_phone1_172517.svg" alt="telephone icon" class='amenity telephoneIcon'><span class="tooltiptext">Telephone</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/iconfinder_bathtub_2023112.svg" alt="bath icon" class='amenity bathIcon'><span class="tooltiptext">Bath</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/crossed-knife-and-fork.svg" alt="kitchen icon" class='amenity kitchenIcon'><span class="tooltiptext">Kitchen</span></div>
+              <div class="tooltipCnt"><img src="src/bookingPageSrc/desk.svg" alt="work space icon" class='amenity workSpaceIcon'><span class="tooltiptext">Work space</span></div>
+            </div>
+          </div>
+          <div class='roomsInfoPrice thirdInfoPrice'>
+            <p>From</p>
+            <h2>$350</h2>
+            <button type="button" name="more Info" class> More Info</button>
+            <img src="src/bookingPageSrc/icons8-collapse-arrow-48.png" alt="next Arrow">
+          </div>
+        </li>
+
+        <hr noshade>
+
+      </ul>
+
+    </section>
+
+    <section class='contactSect' id='contactSect'>
+
+      <h4 class='contactUsTxt'>CONTACT US</h4>
+
+      <div class="contactTxt">
+        <p>info@mysite.come</p>
+        <p class='hideSlash'>/</p>
+        <p>500 Terry Francois Street, San Francisco, CA 94158</p>
+        <p class='hideSlash'>/</p>
+        <p>Tel: 123-645-9078 </p>
+
+        <div class="SocContBottom">
+          <div class="SocContBottomItemCont">
+            <a href="https://www.tripadvisor.com/" target="_blank"><img src="src/tripadvisor.svg" alt="tripadvisor" class='tripadvisor'></a>
+            <a href="https://www.facebook.com" target="_blank"><img src="src/facebook-letter-logo.svg" alt="facebook" class='facebook'></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="src/instagram.svg" alt="instagram" class='instagram'></a>
+          </div>
+        </div>
+
+      </div>
+
+      <form class="contactSectForm" action="" method="">
+        <ul>
+          <li>
+            <input type="text" name="nameField" placeholder="Name *" class='nameField'>
+            <input type="email" name="emailField" placeholder="Email *" class='emailField'>
+          </li>
+          <li>
+            <input type="text" name="subjectField" placeholder="Subject" class='subjectField'>
+          </li>
+          <li>
+            <textarea name="messageField" rows="10" cols="110"  placeholder="Message" class='messageField'></textarea>
+          </li>
+          <li>
+            <button type="button" name="send">Send</button>
+          </li>
+        </ul>
+      </form>
+
+      <div class="mapDiv">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.0041898846484!2d-78.90841041041315!3d33.66740098602311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x890069e9bf955ab5%3A0x6e84a4964de3cd3d!2sParadise%20Resort!5e0!3m2!1slt!2slt!4v1569782193930!5m2!1slt!2slt"></iframe>
+      </div>
+
+    </section>
+
+    <footer> <span>© 2019 by Odeta. Recreated from Wix.com template.</span> </footer>
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+      <script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>
